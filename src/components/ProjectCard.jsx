@@ -35,11 +35,11 @@ export default function ProjectCard({ project, index = 0 }) {
               </a>
             </div>
 
-            <h4 className="text-2xl font-black text-white mb-4 tracking-tight group-hover:text-codorah-gold transition-colors">
+            <h4 className="text-2xl font-bold text-white mb-6 tracking-tight group-hover:text-codorah-gold transition-colors font-heading uppercase italic">
               {project.title}
             </h4>
             
-            <p className="text-gray-400 text-sm mb-8 flex-grow leading-relaxed">
+            <p className="text-gray-400 text-sm mb-10 flex-grow leading-relaxed font-light opacity-80 group-hover:opacity-100 transition-opacity">
               {project.description}
             </p>
 

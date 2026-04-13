@@ -1,15 +1,15 @@
-import { Syne, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Outfit, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-const syne = Syne({
-  variable: "--font-syne",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -27,7 +27,7 @@ import { LanguageProvider } from '../context/LanguageContext';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${syne.variable} ${plusJakartaSans.variable} ${jetBrainsMono.variable} h-full antialiased`}>
+    <html lang="fr" className={`${outfit.variable} ${inter.variable} ${jetBrainsMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-[#050508] text-white selection:bg-[#8B5CF6]/30 relative font-sans">
         <LanguageProvider>
           {/* Grain Texture Overlay */}

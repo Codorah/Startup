@@ -7,7 +7,8 @@ import * as LucideIcons from 'lucide-react';
 
 export default function ProcessSection() {
   const { lang } = useLanguage();
-  const { process, whyUs } = CODORAH_TRANSLATIONS[lang];
+  const t = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
+  const { process, whyUs } = t;
   const containerRef = useRef(null);
   
   const { scrollYProgress } = useScroll({

@@ -5,7 +5,7 @@ import { Link as LinkIcon } from 'lucide-react';
 
 export default function TeamPage() {
   const { lang } = useLanguage();
-  const { team } = CODORAH_TRANSLATIONS[lang];
+  const { team } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
     <section className="pt-40 pb-20 px-10 bg-codorah-black min-h-screen">

@@ -7,7 +7,7 @@ import { TiltCard } from './TiltCard';
 
 export default function ServicesGrid({ limit }) {
   const { lang } = useLanguage();
-  const { services } = CODORAH_TRANSLATIONS[lang];
+  const { services = [] } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
   const displayedServices = limit ? services.slice(0, limit) : services;
 
   return (
@@ -50,13 +50,13 @@ export default function ServicesGrid({ limit }) {
                         {lang === 'FR' ? 'Certifiant' : 'Certified'}
                       </div>
                     )}
-                    <h3 className="text-2xl font-black text-white mb-4 relative z-10 uppercase tracking-tight">{service.title}</h3>
-                    <p className="text-gray-400 mb-8 flex-grow relative z-10 leading-relaxed font-light">{service.desc}</p>
+                    <h3 className="text-2xl font-bold text-white mb-6 relative z-10 uppercase tracking-tight font-heading group-hover:text-codorah-gold transition-colors">{service.title}</h3>
+                    <p className="text-gray-400 mb-10 flex-grow relative z-10 leading-relaxed font-light text-sm">{service.desc}</p>
                     
-                    <ul className="space-y-3 mt-auto relative z-10">
+                    <ul className="space-y-4 mt-auto relative z-10">
                       {service.features.map((feature, j) => (
-                        <li key={j} className="flex items-center text-[10px] uppercase tracking-widest text-gray-400 font-bold">
-                          <LucideIcons.Check size={14} className="text-codorah-neonViolet mr-3" />
+                        <li key={j} className="flex items-center text-[11px] uppercase tracking-[0.2em] text-gray-500 font-medium group-hover:text-gray-300 transition-colors">
+                          <LucideIcons.Check size={14} className="text-codorah-neonViolet mr-4 opacity-50" />
                           {feature}
                         </li>
                       ))}

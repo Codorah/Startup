@@ -1,10 +1,11 @@
 "use client";
-import { projects } from '../data/projects';
 import ProjectCard from './ProjectCard';
 import { useLanguage } from '../context/LanguageContext';
+import { CODORAH_TRANSLATIONS } from '../data/codorah';
 
 export default function ProjectsSection() {
   const { lang } = useLanguage();
+  const { projects = [] } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
     <section id="projets" className="py-24 px-8 bg-[#050508] border-t border-white/5 relative overflow-hidden">
@@ -20,7 +21,7 @@ export default function ProjectsSection() {
           <div className="w-8 h-[1px] bg-codorah-neonViolet/30"></div>
         </div>
         <h3 className="text-4xl md:text-8xl font-black text-white mb-20 tracking-tighter text-center uppercase italic">
-          <span className="text-codorah-neonViolet">Écosystème</span> Projets
+          <span className="text-codorah-neonViolet">{lang === 'FR' ? 'Écosystème' : 'Ecosystem'}</span> {lang === 'FR' ? 'Projets' : 'Projects'}
         </h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

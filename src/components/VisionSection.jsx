@@ -5,7 +5,7 @@ import { CODORAH_TRANSLATIONS } from '../data/codorah';
 
 export default function VisionSection() {
   const { lang } = useLanguage();
-  const { vision } = CODORAH_TRANSLATIONS[lang];
+  const { vision } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
     <section id="vision" className="py-40 px-8 bg-codorah-black relative overflow-hidden flex items-center justify-center min-h-screen">
@@ -14,7 +14,7 @@ export default function VisionSection() {
         <img 
           src="/assets/bg/ferrari_vision.png" 
           alt="Cyber Ferrari" 
-          className="w-full h-full object-cover opacity-30 grayscale hover:grayscale-0 transition-all duration-[2s] scale-110 group-hover:scale-100"
+          className="w-full h-full object-cover opacity-60 hover:scale-105 transition-all duration-[3s] scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-codorah-black via-codorah-black/60 to-codorah-black"></div>
       </div>

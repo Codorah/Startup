@@ -28,7 +28,7 @@ export default function Navbar() {
         style={{ scaleX }}
       />
       <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-6 backdrop-blur-md border-b border-white/5 bg-[#050508]/50">
-        <div className="text-2xl font-black tracking-tighter text-[#FFD700] italic">CODORAH</div>
+        <div className="text-2xl font-bold tracking-tighter text-[#FFD700] italic font-heading uppercase">CODORAH</div>
         
         <div className="hidden lg:flex gap-8 text-[10px] uppercase tracking-[0.3em] font-bold">
           <a href="#accueil" className="hover:text-codorah-gold transition-colors">{currentNav.home}</a>

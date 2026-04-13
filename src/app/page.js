@@ -20,7 +20,7 @@ const ThreeScene = dynamic(() => import('../components/ThreeScene'), { ssr: fals
 
 export default function Home() {
   const { lang } = useLanguage();
-  const { hero } = CODORAH_TRANSLATIONS[lang];
+  const { hero } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
     <main className="relative bg-codorah-black overflow-x-hidden">
@@ -47,16 +47,16 @@ export default function Home() {
         <div className="relative z-20 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-8 pointer-events-none mt-20">
           
           <div className="mb-10 md:mb-0 max-w-2xl">
-            <h2 className="text-5xl md:text-9xl font-black text-white tracking-tighter mb-4 uppercase italic">
+            <h2 className="text-5xl md:text-9xl font-bold text-white tracking-tighter mb-6 uppercase italic font-heading leading-none">
               <ScrambleText text={hero.title} duration={2000} delay={500} />
             </h2>
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-8">
                <div className="h-[2px] w-12 bg-codorah-gold"></div>
-               <p className="text-codorah-gold tracking-[0.4em] text-xs md:text-sm font-black uppercase">
+               <p className="text-codorah-gold tracking-[0.4em] text-xs md:text-sm font-bold uppercase font-heading">
                  <ScrambleText text={hero.subtitle} duration={2500} delay={700} />
                </p>
             </div>
-            <p className="text-white/60 max-w-lg mb-10 text-lg leading-relaxed font-light">{hero.description}</p>
+            <p className="text-gray-400 max-w-lg mb-12 text-xl leading-relaxed font-light opacity-90">{hero.description}</p>
             
             <div className="flex gap-6 items-center pointer-events-auto">
               <Magnetic>

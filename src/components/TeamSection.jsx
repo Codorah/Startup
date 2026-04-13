@@ -7,7 +7,7 @@ import { TiltCard } from './TiltCard';
 
 export default function TeamSection() {
   const { lang } = useLanguage();
-  const { team } = CODORAH_TRANSLATIONS[lang];
+  const { team = [] } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
     <section id="equipe" className="py-32 px-8 bg-[#050508] relative overflow-hidden">

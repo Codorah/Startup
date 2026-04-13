@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function ContactSection() {
   const { lang } = useLanguage();
-  const { contact } = CODORAH_TRANSLATIONS[lang];
+  const { contact } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
     <section id="contact" className="py-32 px-8 bg-codorah-black relative overflow-hidden">
@@ -23,12 +23,12 @@ export default function ContactSection() {
             <span className="text-codorah-neonViolet text-[10px] font-mono tracking-[0.5em] uppercase mb-4 block animate-pulse">
               08 // {lang === 'FR' ? 'Initialisation' : 'Get in Touch'}
             </span>
-            <h2 className="text-4xl md:text-8xl font-black text-white mb-8 tracking-tighter italic uppercase">
+            <h2 className="text-4xl md:text-8xl font-bold text-white mb-10 tracking-tighter italic uppercase font-heading">
               {contact.title?.split(' ').map((word, i) => (
                 <span key={i} className={i % 2 !== 0 ? 'text-codorah-neonViolet' : ''}>{word} </span>
               ))}
             </h2>
-            <p className="text-gray-400 text-xl mb-12 font-light leading-relaxed max-w-md">
+            <p className="text-gray-400 text-xl mb-12 font-light leading-relaxed max-w-md opacity-80">
               {contact.desc}
             </p>
 

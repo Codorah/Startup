@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutSection() {
   const { lang } = useLanguage();
-  const { about } = CODORAH_TRANSLATIONS[lang];
+  const { about } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
     <section id="about" className="py-32 px-8 bg-codorah-black relative overflow-hidden">
@@ -37,11 +37,11 @@ export default function AboutSection() {
             <span className="text-codorah-neonViolet text-[10px] font-mono tracking-[0.4em] uppercase opacity-80 animate-pulse">01 // {lang === 'FR' ? 'Notre Histoire' : 'Our Story'}</span>
           </div>
           
-          <h2 className="text-4xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tighter uppercase italic">
+          <h2 className="text-4xl md:text-8xl font-bold text-white mb-10 leading-tight tracking-tighter uppercase italic font-heading">
             {about.title}
           </h2>
           
-          <p className="text-gray-400 text-xl leading-relaxed mb-10 max-w-3xl font-light">
+          <p className="text-gray-400 text-xl leading-relaxed mb-12 max-w-3xl font-light opacity-90">
             {about.description}
           </p>
           

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="pt-20 pb-10 px-8 border-t border-white/5 bg-[#050508] relative z-20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-        <div className="text-2xl font-black tracking-tighter text-[#FFD700] italic">CODORAH</div>
+        <div className="text-2xl font-bold tracking-tighter text-[#FFD700] italic font-heading uppercase">CODORAH</div>
         
         <div className="flex gap-6">
           <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:border-codorah-gold hover:text-codorah-gold transition-all">
