@@ -1,3 +1,4 @@
+"use client";
 import { useLanguage } from '../context/LanguageContext';
 import { CODORAH_TRANSLATIONS } from '../data/codorah';
 import { FileText, Link as LinkIcon, ExternalLink } from 'lucide-react';

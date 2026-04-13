@@ -1,3 +1,4 @@
+"use client";
 import { useLanguage } from '../context/LanguageContext';
 import { CODORAH_TRANSLATIONS } from '../data/codorah';
 import { motion } from 'framer-motion';
