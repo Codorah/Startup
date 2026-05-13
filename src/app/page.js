@@ -5,7 +5,6 @@ import AboutSection from '../components/AboutSection';
 import VisionSection from '../components/VisionSection';
 import ServicesGrid from '../components/ServicesGrid';
 import ProcessSection from '../components/ProcessSection';
-import PartnerMarquee from '../components/PartnersMarquee';
 import ContactSection from '../components/ContactSection';
 import TechMarquee from '../components/TechMarquee';
 import ScrambleText from '../components/ScrambleText';
@@ -122,7 +121,6 @@ export default function Home() {
         <TeamSection />
       </div>
 
-      <PartnerMarquee />
       <div id="contact">
         <ContactSection />
       </div>

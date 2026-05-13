@@ -83,10 +83,10 @@ export default function TeamSection() {
               </a>
               
               <div className="flex gap-3 ml-auto">
-                <a href="https://linkedin.com/in/elodieatana" target="_blank" rel="noopener noreferrer" className="text-[#6B7280] hover:text-[#7C3AED] transition-colors p-2.5 bg-gray-50 rounded-xl hover:bg-[#7C3AED]/10">
+                <a href="https://www.linkedin.com/in/codorah" target="_blank" rel="noopener noreferrer" className="text-[#6B7280] hover:text-[#7C3AED] transition-colors p-2.5 bg-gray-50 rounded-xl hover:bg-[#7C3AED]/10">
                   <ExternalLink size={16} />
                 </a>
-                <a href="https://github.com/elodieatana" target="_blank" rel="noopener noreferrer" className="text-[#6B7280] hover:text-[#7C3AED] transition-colors p-2.5 bg-gray-50 rounded-xl hover:bg-[#7C3AED]/10">
+                <a href="https://github.com/Codorah" target="_blank" rel="noopener noreferrer" className="text-[#6B7280] hover:text-[#7C3AED] transition-colors p-2.5 bg-gray-50 rounded-xl hover:bg-[#7C3AED]/10">
                   <GitBranch size={16} />
                 </a>
               </div>

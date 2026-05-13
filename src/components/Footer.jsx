@@ -44,26 +44,29 @@ export default function Footer() {
           {/* Social icons */}
           <div className="flex gap-3">
             <a
-              href="https://portfolio-js-elodie.vercel.app/"
+              href="https://www.linkedin.com/in/codorah"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#6B7280] hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all"
+              title="LinkedIn"
             >
               <LinkIcon size={16} />
             </a>
             <a
-              href="https://github.com/elodieatana"
+              href="https://github.com/Codorah"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#6B7280] hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all"
+              title="GitHub"
             >
               <GitBranch size={16} />
             </a>
             <a
-              href="https://linkedin.com/in/elodieatana"
+              href="https://portfolio-js-elodie.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#6B7280] hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all"
+              title="Portfolio"
             >
               <ExternalLink size={16} />
             </a>
