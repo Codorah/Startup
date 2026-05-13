@@ -28,7 +28,7 @@ export default function VisionSection() {
             02 // Vision &amp; Momentum
           </span>
 
-          <div className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter uppercase italic mb-16 px-4">
+          <div className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter uppercase italic mb-8 px-4">
             <span className="text-[#A78BFA]">"</span>
             {vision.quote.split('?').map((part, i, arr) => (
               <span key={i}>
@@ -49,10 +49,16 @@ export default function VisionSection() {
             <span className="text-[#A78BFA]">"</span>
           </div>
 
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-16 max-w-2xl mx-auto font-mono">
+            {lang === 'FR' 
+              ? "L'Intelligence Artificielle ne remplacera pas l'être humain, mais ceux qui maîtrisent ces nouveaux outils domineront incontestablement le marché. L'IA est une Ferrari : sa puissance est phénoménale, mais sans le permis (les compétences) et l'essence (la data et les bons prompts), elle reste garée au garage. Chez Codorah, nous vous donnons les clés de la Ferrari."
+              : "Artificial Intelligence won't replace humans, but those who master these new tools will undeniably dominate the market. AI is a Ferrari: its power is phenomenal, but without the license (skills) and the fuel (data and good prompts), it stays in the garage. At Codorah, we give you the keys to the Ferrari."}
+          </p>
+
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#7C3AED]/60 mb-6 shadow-[0_0_30px_rgba(124,58,237,0.4)] bg-[#0F0A1E]">
               <img
-                src="/assets/team/elodie.jpg"
+                src="/assets/team/elodie.png"
                 alt={vision.author}
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />

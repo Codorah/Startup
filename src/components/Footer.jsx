@@ -1,5 +1,5 @@
 "use client";
-import { Link as LinkIcon, SendHorizontal, MessageSquare, X } from 'lucide-react';
+import { Link as LinkIcon, Github, Linkedin, X } from 'lucide-react';
 import { useState } from 'react';
 
 // Modal Component
@@ -43,15 +43,30 @@ export default function Footer() {
 
           {/* Social icons */}
           <div className="flex gap-3">
-            {[LinkIcon, SendHorizontal, MessageSquare].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#6B7280] hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all"
-              >
-                <Icon size={16} />
-              </a>
-            ))}
+            <a
+              href="https://portfolio-js-elodie.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#6B7280] hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all"
+            >
+              <LinkIcon size={16} />
+            </a>
+            <a
+              href="https://github.com/elodieatana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#6B7280] hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all"
+            >
+              <Github size={16} />
+            </a>
+            <a
+              href="https://linkedin.com/in/elodieatana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#6B7280] hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all"
+            >
+              <Linkedin size={16} />
+            </a>
           </div>
         </div>
 
