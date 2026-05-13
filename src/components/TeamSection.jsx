@@ -1,7 +1,14 @@
+/**
+ * @file TeamSection.jsx
+ * @description Founder profile section — showcases Elodie Atana, CEO & Founder of Codorah.
+ * Includes her photo, bio, role, specialties, and action links (Portfolio, LinkedIn, GitHub).
+ * Replaces the previous multi-member team grid for a more focused founder-first presentation.
+ */
 "use client";
 import { useLanguage } from '../context/LanguageContext';
 import { FileText, GitBranch, ExternalLink, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 
 export default function TeamSection() {
   const { lang } = useLanguage();

@@ -1,6 +1,16 @@
+/**
+ * @file Footer.jsx
+ * @description Site footer with:
+ *  - Codorah brand logo + anchor navigation links
+ *  - Social icons linking to LinkedIn (codorah), GitHub (Codorah), and personal portfolio
+ *  - Privacy Policy modal (GDPR-compliant content)
+ *  - Terms of Use modal
+ * Modals are rendered inline using React state — no router navigation required.
+ */
 "use client";
 import { Link as LinkIcon, GitBranch, ExternalLink, X } from 'lucide-react';
 import { useState } from 'react';
+
 
 // Modal Component
 const Modal = ({ isOpen, onClose, title, children }) => {

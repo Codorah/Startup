@@ -1,7 +1,14 @@
+/**
+ * @file AboutSection.jsx
+ * @description "Our Story" section — displays Codorah's mission, founding vision,
+ * target audience, and key stats (Founded in Togo, Results-Oriented, Pan-African).
+ * Content is fully driven by the CODORAH_TRANSLATIONS data object.
+ */
 "use client";
 import { useLanguage } from '../context/LanguageContext';
 import { CODORAH_TRANSLATIONS } from '../data/codorah';
 import { motion } from 'framer-motion';
+
 
 export default function AboutSection() {
   const { lang } = useLanguage();

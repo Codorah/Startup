@@ -1,7 +1,14 @@
+/**
+ * @file VisionSection.jsx
+ * @description Founder quote section (dark background). Displays the core vision quote
+ * from Elodie Atana ("AI is a Ferrari..."), followed by an explanatory paragraph
+ * and the founder's photo/attribution. Content adapts to the active language.
+ */
 "use client";
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { CODORAH_TRANSLATIONS } from '../data/codorah';
+
 
 export default function VisionSection() {
   const { lang } = useLanguage();

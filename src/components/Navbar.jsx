@@ -1,9 +1,16 @@
+/**
+ * @file Navbar.jsx
+ * @description Fixed top navigation bar with scroll progress indicator,
+ * multilingual link labels, language switcher dropdown, and responsive
+ * mobile hamburger menu.
+ */
 "use client";
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useLanguage, languages } from '../context/LanguageContext';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
+// Navigation link labels for each supported language
 const NAV_LINKS = {
   FR: { home: 'Accueil', about: 'À Propos', services: 'Services', team: 'L\'Équipe', contact: 'Contact' },
   EN: { home: 'Home', about: 'About', services: 'Services', team: 'Team', contact: 'Contact' },
@@ -12,11 +19,15 @@ const NAV_LINKS = {
 };
 
 export default function Navbar() {
+  // Track scroll position to drive the progress bar animation
   const { scrollYProgress } = useScroll();
   const { lang, changeLanguage } = useLanguage();
+
+  // UI state for dropdowns
   const [showLangs, setShowLangs] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Smooth spring physics for the scroll progress bar
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100, damping: 30, restDelta: 0.001
   });
@@ -25,17 +36,17 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Scroll Progress */}
+      {/* Scroll progress bar — fixed at top, scales horizontally with page scroll */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-[2px] bg-[#7C3AED] origin-left z-[70]"
         style={{ scaleX }}
       />
 
       <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-5 backdrop-blur-md border-b border-black/5 bg-white/80 shadow-[0_1px_20px_rgba(0,0,0,0.04)]">
-        {/* Logo */}
+        {/* Brand logo */}
         <div className="text-xl font-black tracking-tighter text-[#7C3AED] italic font-heading uppercase">CODORAH</div>
 
-        {/* Desktop nav */}
+        {/* Desktop navigation links */}
         <div className="hidden lg:flex gap-8 text-[10px] uppercase tracking-[0.3em] font-bold text-[#0F0A1E]/60">
           <a href="#accueil" className="hover:text-[#7C3AED] transition-colors">{currentNav.home}</a>
           <a href="#about" className="hover:text-[#7C3AED] transition-colors">{currentNav.about}</a>
@@ -44,7 +55,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          {/* Language Switcher */}
+          {/* Language switcher dropdown */}
           <div className="relative">
             <button
               onClick={() => setShowLangs(!showLangs)}
@@ -68,7 +79,7 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Contact CTA */}
+          {/* Primary CTA — visible on desktop */}
           <a
             href="#contact"
             className="hidden md:inline-flex bg-[#7C3AED] text-white px-6 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-[#6D28D9] hover:shadow-[0_8px_30px_rgba(124,58,237,0.3)] transition-all duration-300"
@@ -76,14 +87,14 @@ export default function Navbar() {
             {currentNav.contact}
           </a>
 
-          {/* Mobile menu toggle */}
+          {/* Mobile hamburger toggle */}
           <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden p-2 rounded-xl border border-gray-200 text-[#0F0A1E]">
             {mobileOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile slide-down menu */}
       {mobileOpen && (
         <div className="fixed top-[65px] left-0 right-0 z-40 bg-white border-b border-gray-100 shadow-lg px-6 py-6 flex flex-col gap-5 lg:hidden">
           {[

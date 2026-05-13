@@ -1,9 +1,18 @@
+/**
+ * @file ProcessSection.jsx
+ * @description Two-part section:
+ *  1. "Why Us" — a 5-column grid of value propositions with icon cards.
+ *  2. "Our Methodology" — a scroll-linked vertical timeline showing the 4-phase
+ *     development process (Discovery → Design → Build → Launch).
+ *     The timeline line grows as the user scrolls through it.
+ */
 "use client";
 import { useLanguage } from '../context/LanguageContext';
 import { CODORAH_TRANSLATIONS } from '../data/codorah';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import * as LucideIcons from 'lucide-react';
+
 
 export default function ProcessSection() {
   const { lang } = useLanguage();
