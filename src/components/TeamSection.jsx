@@ -1,6 +1,6 @@
 "use client";
 import { useLanguage } from '../context/LanguageContext';
-import { FileText, GitBranch, Linkedin, ArrowRight } from 'lucide-react';
+import { FileText, GitBranch, ExternalLink, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function TeamSection() {
@@ -84,7 +84,7 @@ export default function TeamSection() {
               
               <div className="flex gap-3 ml-auto">
                 <a href="https://linkedin.com/in/elodieatana" target="_blank" rel="noopener noreferrer" className="text-[#6B7280] hover:text-[#7C3AED] transition-colors p-2.5 bg-gray-50 rounded-xl hover:bg-[#7C3AED]/10">
-                  <Linkedin size={16} />
+                  <ExternalLink size={16} />
                 </a>
                 <a href="https://github.com/elodieatana" target="_blank" rel="noopener noreferrer" className="text-[#6B7280] hover:text-[#7C3AED] transition-colors p-2.5 bg-gray-50 rounded-xl hover:bg-[#7C3AED]/10">
                   <GitBranch size={16} />

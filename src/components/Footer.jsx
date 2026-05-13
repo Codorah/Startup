@@ -1,5 +1,5 @@
 "use client";
-import { Link as LinkIcon, GitBranch, Linkedin, X } from 'lucide-react';
+import { Link as LinkIcon, GitBranch, ExternalLink, X } from 'lucide-react';
 import { useState } from 'react';
 
 // Modal Component
@@ -65,7 +65,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl border border-gray-200 flex items-center justify-center text-[#6B7280] hover:border-[#7C3AED]/40 hover:text-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all"
             >
-              <Linkedin size={16} />
+              <ExternalLink size={16} />
             </a>
           </div>
         </div>
