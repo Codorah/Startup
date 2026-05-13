@@ -9,89 +9,96 @@ export default function ContactSection() {
   const { contact } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
-    <section id="contact" className="py-32 px-8 bg-codorah-black relative overflow-hidden">
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-codorah-neonViolet/5 blur-[120px] rounded-full pointer-events-none"></div>
-      
+    <section id="contact" className="py-32 px-8 bg-[#F8F7FF] relative overflow-hidden">
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#7C3AED]/5 blur-[120px] rounded-full pointer-events-none" />
+
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+          {/* Left — Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-codorah-neonViolet text-[10px] font-mono tracking-[0.5em] uppercase mb-4 block animate-pulse">
-              08 // {lang === 'FR' ? 'Initialisation' : 'Get in Touch'}
+            <span className="text-[#7C3AED] text-[10px] font-mono tracking-[0.5em] uppercase mb-4 block">
+              07 // {lang === 'FR' ? 'Initialisation' : 'Get in Touch'}
             </span>
-            <h2 className="text-4xl md:text-8xl font-bold text-white mb-10 tracking-tighter italic uppercase font-heading">
+            <h2 className="text-4xl md:text-6xl font-black text-[#0F0A1E] mb-8 tracking-tighter italic uppercase font-heading leading-tight">
               {contact.title?.split(' ').map((word, i) => (
-                <span key={i} className={i % 2 !== 0 ? 'text-codorah-neonViolet' : ''}>{word} </span>
+                <span key={i} className={i % 3 === 2 ? 'text-[#7C3AED]' : ''}>{word} </span>
               ))}
             </h2>
-            <p className="text-gray-400 text-xl mb-12 font-light leading-relaxed max-w-md opacity-80">
+            <p className="text-[#6B7280] text-xl mb-12 font-light leading-relaxed max-w-md">
               {contact.desc}
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-codorah-gold transition-colors shadow-lg">
-                  <Mail className="text-codorah-gold" size={24} />
+            <div className="space-y-6">
+              {[
+                { icon: Mail, label: 'Email', value: 'codorah@hotmail.com', color: '#7C3AED' },
+                { icon: Phone, label: 'WhatsApp', value: '+228 71 67 65 25', color: '#059669' },
+                { icon: MapPin, label: 'Location', value: 'Lomé, Togo 🇹🇬', color: '#D97706' },
+              ].map(({ icon: Icon, label, value, color }) => (
+                <div key={label} className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 rounded-2xl bg-white border border-gray-100 flex items-center justify-center shadow-sm group-hover:border-gray-200 group-hover:shadow-md transition-all">
+                    <Icon size={20} style={{ color }} />
+                  </div>
+                  <div>
+                    <p className="text-[9px] text-[#6B7280] font-mono tracking-widest uppercase mb-0.5">{label}</p>
+                    <p className="text-[#0F0A1E] font-bold text-base">{value}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[10px] text-gray-500 font-mono tracking-widest uppercase mb-1">Email</p>
-                  <p className="text-white font-bold text-lg">codorah@hotmail.com</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-codorah-neonViolet transition-colors shadow-lg">
-                  <Phone className="text-codorah-neonViolet" size={24} />
-                </div>
-                <div>
-                  <p className="text-[10px] text-gray-500 font-mono tracking-widest uppercase mb-1">WhatsApp</p>
-                  <p className="text-white font-bold text-lg">+228 71 67 65 25</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-white transition-colors shadow-lg">
-                  <MapPin className="text-gray-400" size={24} />
-                </div>
-                <div>
-                  <p className="text-[10px] text-gray-500 font-mono tracking-widest uppercase mb-1">Location</p>
-                  <p className="text-white font-bold text-lg">Lomé, Togo 🇹🇬</p>
-                </div>
-              </div>
+              ))}
             </div>
           </motion.div>
 
+          {/* Right — Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#1A0B2E]/20 backdrop-blur-xl p-10 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden group"
+            className="bg-white p-10 rounded-3xl border border-gray-100 shadow-[0_10px_60px_rgba(0,0,0,0.04)] relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-codorah-neonViolet/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            
-            <form className="space-y-6 relative z-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-[10px] text-gray-500 font-mono tracking-widest uppercase pl-2">{lang === 'FR' ? 'Nom' : 'Name'}</label>
-                  <input type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-codorah-neonViolet outline-none transition-all placeholder:text-white/10" placeholder="John Doe" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#7C3AED] via-[#A855F7] to-[#7C3AED] rounded-t-3xl"></div>
+
+            <form className="space-y-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="space-y-1.5">
+                  <label className="text-[9px] text-[#6B7280] font-mono tracking-widest uppercase">{lang === 'FR' ? 'Nom' : 'Name'}</label>
+                  <input
+                    type="text"
+                    className="w-full bg-[#F8F7FF] border border-gray-200 rounded-xl px-4 py-3 text-[#0F0A1E] focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/10 outline-none transition-all placeholder:text-gray-400 text-sm"
+                    placeholder="John Doe"
+                  />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] text-gray-500 font-mono tracking-widest uppercase pl-2">Email</label>
-                  <input type="email" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-codorah-neonViolet outline-none transition-all placeholder:text-white/10" placeholder="john@example.com" />
+                <div className="space-y-1.5">
+                  <label className="text-[9px] text-[#6B7280] font-mono tracking-widest uppercase">Email</label>
+                  <input
+                    type="email"
+                    className="w-full bg-[#F8F7FF] border border-gray-200 rounded-xl px-4 py-3 text-[#0F0A1E] focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/10 outline-none transition-all placeholder:text-gray-400 text-sm"
+                    placeholder="john@example.com"
+                  />
                 </div>
               </div>
-              <div className="space-y-2">
-                <label className="text-[10px] text-gray-500 font-mono tracking-widest uppercase pl-2">{lang === 'FR' ? 'Objet' : 'Subject'}</label>
-                <input type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-codorah-neonViolet outline-none transition-all placeholder:text-white/10" placeholder={lang === 'FR' ? 'Innovation I.A' : 'A.I Innovation'} />
+              <div className="space-y-1.5">
+                <label className="text-[9px] text-[#6B7280] font-mono tracking-widest uppercase">{lang === 'FR' ? 'Objet' : 'Subject'}</label>
+                <input
+                  type="text"
+                  className="w-full bg-[#F8F7FF] border border-gray-200 rounded-xl px-4 py-3 text-[#0F0A1E] focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/10 outline-none transition-all placeholder:text-gray-400 text-sm"
+                  placeholder={lang === 'FR' ? 'Création de site web...' : 'Website creation...'}
+                />
               </div>
-              <div className="space-y-2">
-                <label className="text-[10px] text-gray-500 font-mono tracking-widest uppercase pl-2">Message</label>
-                <textarea rows="4" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-codorah-neonViolet outline-none transition-all placeholder:text-white/10" placeholder={lang === 'FR' ? 'Parlez-nous de votre projet...' : 'Tell us about your project...'}></textarea>
+              <div className="space-y-1.5">
+                <label className="text-[9px] text-[#6B7280] font-mono tracking-widest uppercase">Message</label>
+                <textarea
+                  rows={4}
+                  className="w-full bg-[#F8F7FF] border border-gray-200 rounded-xl px-4 py-3 text-[#0F0A1E] focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/10 outline-none transition-all placeholder:text-gray-400 text-sm resize-none"
+                  placeholder={lang === 'FR' ? 'Parlez-nous de votre projet...' : 'Tell us about your project...'}
+                />
               </div>
-              <button className="w-full bg-codorah-neonViolet text-white font-black py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-opacity-80 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:scale-[1.02] active:scale-[0.98] uppercase tracking-[0.2em] text-xs">
-                {lang === 'FR' ? 'Initialiser l\'envoi' : 'Initialize Send'} <Send size={16} />
+              <button className="w-full bg-[#7C3AED] text-white font-black py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-[#6D28D9] hover:shadow-[0_10px_40px_rgba(124,58,237,0.3)] transition-all duration-300 uppercase tracking-[0.2em] text-xs">
+                {lang === 'FR' ? 'Envoyer le Message' : 'Send Message'}
+                <Send size={16} />
               </button>
             </form>
           </motion.div>

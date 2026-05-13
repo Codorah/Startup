@@ -7,40 +7,36 @@ const NAV_ITEMS = {
   FR: [
     { id: 'accueil', label: 'Start' },
     { id: 'about', label: 'Origine' },
-    { id: 'vision', label: 'Momentum' },
-    { id: 'services', label: 'Solutions' },
-    { id: 'process', label: 'Cycle' },
-    { id: 'projets', label: 'Logic' },
-    { id: 'equipe', label: 'Elite' },
-    { id: 'contact', label: 'Init' },
+    { id: 'vision', label: 'Vision' },
+    { id: 'services', label: 'Services' },
+    { id: 'process', label: 'Process' },
+    { id: 'equipe', label: 'Équipe' },
+    { id: 'contact', label: 'Contact' },
   ],
   EN: [
     { id: 'accueil', label: 'Start' },
-    { id: 'about', label: 'Origin' },
-    { id: 'vision', label: 'Momentum' },
-    { id: 'services', label: 'Solutions' },
-    { id: 'process', label: 'Cycle' },
-    { id: 'projets', label: 'Logic' },
-    { id: 'equipe', label: 'Elite' },
-    { id: 'contact', label: 'Init' },
+    { id: 'about', label: 'About' },
+    { id: 'vision', label: 'Vision' },
+    { id: 'services', label: 'Services' },
+    { id: 'process', label: 'Process' },
+    { id: 'equipe', label: 'Team' },
+    { id: 'contact', label: 'Contact' },
   ],
   ES: [
     { id: 'accueil', label: 'Inicio' },
-    { id: 'about', label: 'Origen' },
-    { id: 'vision', label: 'Impulso' },
+    { id: 'about', label: 'Sobre' },
+    { id: 'vision', label: 'Visión' },
     { id: 'services', label: 'Servicios' },
-    { id: 'process', label: 'Ciclo' },
-    { id: 'projets', label: 'Proyectos' },
-    { id: 'equipe', label: 'Elite' },
-    { id: 'contact', label: 'Init' },
+    { id: 'process', label: 'Proceso' },
+    { id: 'equipe', label: 'Equipo' },
+    { id: 'contact', label: 'Contacto' },
   ],
   ZH: [
     { id: 'accueil', label: '开始' },
-    { id: 'about', label: '起源' },
-    { id: 'vision', label: '动力' },
-    { id: 'services', label: '解决方案' },
-    { id: 'process', label: '阶段' },
-    { id: 'projets', label: '项目' },
+    { id: 'about', label: '关于' },
+    { id: 'vision', label: '愿景' },
+    { id: 'services', label: '服务' },
+    { id: 'process', label: '流程' },
     { id: 'equipe', label: '团队' },
     { id: 'contact', label: '联系' },
   ]
@@ -60,7 +56,7 @@ export default function SideNav() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.4 }
     );
 
     items.forEach((item) => {
@@ -73,43 +69,39 @@ export default function SideNav() {
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className="fixed right-10 top-1/2 -translate-y-1/2 z-[40] hidden lg:flex flex-col gap-8 items-end">
+    <div className="fixed right-8 top-1/2 -translate-y-1/2 z-[40] hidden lg:flex flex-col gap-6 items-end">
       {items.map((item) => (
         <button
           key={item.id}
           onClick={() => scrollTo(item.id)}
-          className="group flex items-center gap-4 transition-all duration-500 outline-none"
+          className="group flex items-center gap-3 transition-all duration-500 outline-none"
         >
           <AnimatePresence>
             {activeSection === item.id && (
               <motion.span
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 16 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="text-[10px] font-mono tracking-[0.2em] text-codorah-gold uppercase font-bold"
+                exit={{ opacity: 0, x: 16 }}
+                className="text-[9px] font-mono tracking-[0.2em] text-[#7C3AED] uppercase font-bold"
               >
                 {item.label}
               </motion.span>
             )}
           </AnimatePresence>
-          <div className="relative">
-            <div 
-              className={`w-1 h-8 transition-all duration-700 ${
-                activeSection === item.id 
-                ? 'bg-codorah-gold h-12 shadow-[0_0_15px_rgba(255,215,0,0.5)]' 
-                : 'bg-white/10 group-hover:bg-white/30'
-              }`}
-            />
-          </div>
+          <div
+            className={`w-1 rounded-full transition-all duration-500 ${
+              activeSection === item.id
+                ? 'h-10 bg-[#7C3AED] shadow-[0_0_10px_rgba(124,58,237,0.4)]'
+                : 'h-5 bg-gray-300 group-hover:bg-gray-400'
+            }`}
+          />
         </button>
       ))}
-      <div className="absolute right-[-2px] top-0 bottom-0 w-[1px] bg-white/5 -z-10"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-[1px] bg-gray-100 -z-10"></div>
     </div>
   );
 }

@@ -1,19 +1,18 @@
-import ProjectsSection from '../../components/ProjectsSection';
+"use client";
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
+// The projects section has been removed. Redirect to home.
 export default function ProjetsPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace('/#contact');
+  }, [router]);
+
   return (
-    <div className="pt-32 min-h-screen bg-codorah-black text-white">
-      <div className="px-8 max-w-7xl mx-auto mb-16">
-        <h1 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter">
-          NOTRE <span className="text-codorah-gold">PORTFOLIO</span>
-        </h1>
-        <p className="text-gray-400 max-w-2xl text-lg leading-relaxed">
-          Explorez nos études de cas, des solutions SaaS complexes aux applications mobiles intelligentes.
-        </p>
-      </div>
-      
-      {/* We reuse the ProjectsSection but it can be adapted later */}
-      <ProjectsSection />
+    <div className="pt-32 min-h-screen bg-[#F8F7FF] flex items-center justify-center">
+      <p className="text-[#6B7280] font-mono text-sm">Redirection...</p>
     </div>
   );
 }

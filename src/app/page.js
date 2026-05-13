@@ -1,7 +1,6 @@
 "use client";
 import dynamic from 'next/dynamic';
 import TeamSection from '../components/TeamSection';
-import ProjectsSection from '../components/ProjectsSection';
 import AboutSection from '../components/AboutSection';
 import VisionSection from '../components/VisionSection';
 import ServicesGrid from '../components/ServicesGrid';
@@ -13,7 +12,6 @@ import ScrambleText from '../components/ScrambleText';
 import SideNav from '../components/SideNav';
 import { useLanguage } from '../context/LanguageContext';
 import { CODORAH_TRANSLATIONS } from '../data/codorah';
-import CustomCursor from '../components/CustomCursor';
 import Magnetic from '../components/Magnetic';
 
 const ThreeScene = dynamic(() => import('../components/ThreeScene'), { ssr: false });
@@ -23,53 +21,64 @@ export default function Home() {
   const { hero } = CODORAH_TRANSLATIONS[lang] || CODORAH_TRANSLATIONS.EN;
 
   return (
-    <main className="relative bg-codorah-black overflow-x-hidden">
-      <CustomCursor />
+    <main className="relative bg-[#F8F7FF] overflow-x-hidden">
       <SideNav />
-      {/* Technical Status Overlay */}
-      <div className="fixed top-24 left-10 z-[40] hidden lg:block">
-        <div className="flex flex-col gap-1 font-mono text-[10px] tracking-[0.2em] text-codorah-gold/40 uppercase">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-            <span>System: Active</span>
-          </div>
-          <span className="opacity-50">v3.1.0_EDGE</span>
-          <span className="mt-2 text-[8px] opacity-30 tracking-[0.3em]">LOC: 6°07′55″N 1°13′22″E</span>
-        </div>
-      </div>
 
-      {/* Hero Section avec Scène 3D */}
-      <section id="accueil" className="h-screen w-full relative flex items-center justify-center overflow-hidden">
-        <ThreeScene />
+      {/* Hero Section */}
+      <section id="accueil" className="min-h-screen w-full relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8F7FF] via-[#EDE9FE] to-[#F8F7FF]">
         
-        <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-b from-transparent via-codorah-black/50 to-codorah-black"></div>
+        {/* Abstract background blobs */}
+        <div className="absolute top-20 right-[10%] w-[500px] h-[500px] rounded-full bg-[#7C3AED]/8 blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-20 left-[5%] w-[400px] h-[400px] rounded-full bg-[#A855F7]/6 blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] rounded-full bg-[#7C3AED]/4 blur-[150px] pointer-events-none" />
 
-        <div className="relative z-20 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-8 pointer-events-none mt-20">
+        {/* Badge + Status — top left */}
+        <div className="absolute top-28 left-10 z-[40] hidden lg:flex flex-col gap-2">
+          {/* African Tech Startup badge */}
+          <div className="inline-flex items-center gap-2 bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-3 py-1.5 rounded-full">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+            <span className="font-mono text-[9px] tracking-[0.25em] text-[#7C3AED] uppercase font-bold">{hero.badge || 'African Tech Startup'}</span>
+          </div>
+          <div className="flex flex-col gap-0.5 font-mono text-[9px] tracking-[0.2em] text-[#7C3AED]/40 uppercase pl-1">
+            <span>v3.1.0_EDGE</span>
+            <span className="text-[8px] opacity-60">LOC: 6°07′55″N 1°13′22″E</span>
+          </div>
+        </div>
+
+        <div className="relative z-20 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl px-8 pointer-events-none mt-20 gap-12">
           
           <div className="mb-10 md:mb-0 max-w-2xl">
-            <h2 className="text-5xl md:text-9xl font-bold text-white tracking-tighter mb-6 uppercase italic font-heading leading-none">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-[#0F0A1E] tracking-tighter mb-4 uppercase italic font-heading leading-[0.85]">
               <ScrambleText text={hero.title} duration={2000} delay={500} />
-            </h2>
-            <div className="flex items-center gap-4 mb-8">
-               <div className="h-[2px] w-12 bg-codorah-gold"></div>
-               <p className="text-codorah-gold tracking-[0.4em] text-xs md:text-sm font-bold uppercase font-heading">
+            </h1>
+            <div className="flex items-center gap-6 mb-6">
+               <div className="h-[1px] w-16 bg-[#7C3AED]/50"></div>
+               <p className="text-[#7C3AED] tracking-[0.4em] text-[10px] md:text-xs font-bold uppercase font-heading opacity-80">
                  <ScrambleText text={hero.subtitle} duration={2500} delay={700} />
                </p>
             </div>
-            <p className="text-gray-400 max-w-lg mb-12 text-xl leading-relaxed font-light opacity-90">{hero.description}</p>
+            <p className="text-[#6B7280] max-w-xl mb-10 text-base md:text-lg leading-relaxed font-light opacity-90 border-l-2 border-[#7C3AED]/20 pl-8">
+              {hero.description}
+            </p>
+            {/* Tagline */}
+            <p className="text-[#7C3AED]/40 font-mono text-[9px] uppercase tracking-[0.5em] mb-10 pl-8 italic">{hero.tagline}</p>
             
-            <div className="flex gap-6 items-center pointer-events-auto">
+            <div className="flex flex-wrap gap-4 items-center pointer-events-auto">
               <Magnetic>
-                <button className="bg-codorah-neonViolet text-white px-8 py-4 text-[10px] font-black uppercase tracking-[0.3em] hover:shadow-[0_0_30px_rgba(139,92,246,0.4)] transition-all">
-                  {lang === 'FR' ? 'Démarrer' : 'Initialize'}
-                </button>
+                <a href="#contact" className="bg-[#7C3AED] text-white px-8 py-4 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-[#6D28D9] hover:shadow-[0_8px_40px_rgba(124,58,237,0.3)] transition-all rounded-xl">
+                  {hero.cta1 || (lang === 'FR' ? 'Démarrer un Projet' : 'Start a Project')}
+                </a>
               </Magnetic>
-              <p className="text-codorah-neonViolet font-mono text-[9px] uppercase tracking-[0.4em] opacity-40">{hero.tagline}</p>
+              <Magnetic>
+                <a href="#services" className="border border-[#7C3AED]/30 text-[#7C3AED] px-8 py-4 text-[10px] font-black uppercase tracking-[0.3em] hover:border-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all rounded-xl pointer-events-auto">
+                  {hero.cta2 || (lang === 'FR' ? 'Nos Services' : 'Our Services')}
+                </a>
+              </Magnetic>
             </div>
           </div>
 
-          {/* Editeur de code façon VSCode / Mac */}
-          <div className="bg-[#050508]/80 backdrop-blur-xl rounded-2xl border border-white/10 w-full max-w-sm hidden lg:block shadow-[0_0_60px_-10px_rgba(139,92,246,0.3)] overflow-hidden pointer-events-auto group">
+          {/* Code editor widget */}
+          <div className="bg-[#0F0A1E] backdrop-blur-xl rounded-2xl border border-[#7C3AED]/20 w-full max-w-sm hidden lg:block shadow-[0_20px_60px_-10px_rgba(124,58,237,0.2)] overflow-hidden pointer-events-auto group">
             <div className="flex items-center px-4 py-3 bg-white/5 border-b border-white/5">
               <div className="flex gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500/60"></div>
@@ -78,18 +87,18 @@ export default function Home() {
               </div>
               <div className="flex-grow text-center text-[9px] text-gray-500 font-mono tracking-widest">codorah.ts</div>
             </div>
-            <div className="p-8 font-mono text-[11px] text-codorah-neonViolet/80 font-medium">
+            <div className="p-8 font-mono text-[11px] text-[#A78BFA] font-medium">
               <pre className="whitespace-pre-wrap leading-relaxed">
                 <ScrambleText text={hero.codeSnippet} duration={3000} delay={1000} />
               </pre>
             </div>
-            <div className="h-1 w-full bg-gradient-to-r from-transparent via-codorah-neonViolet to-transparent opacity-20 group-hover:opacity-100 transition-opacity"></div>
+            <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#7C3AED] to-transparent opacity-20 group-hover:opacity-100 transition-opacity"></div>
           </div>
           
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 animate-bounce text-[9px] uppercase tracking-[0.5em] font-mono z-20">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[#7C3AED]/40 animate-bounce text-[9px] uppercase tracking-[0.5em] font-mono z-20">
           Scroll ↓
         </div>
       </section>
@@ -107,10 +116,6 @@ export default function Home() {
       </div>
       <div id="process">
         <ProcessSection />
-      </div>
-      
-      <div id="projets">
-        <ProjectsSection />
       </div>
 
       <div id="equipe">

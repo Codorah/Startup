@@ -1,30 +1,21 @@
+"use client";
+import ServicesGrid from '../../components/ServicesGrid';
+
 export default function ServicesPage() {
   return (
-    <div className="pt-32 px-8 min-h-screen bg-codorah-black text-white">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter">
-          NOS <span className="text-codorah-gold">SERVICES</span>
+    <div className="pt-32 min-h-screen bg-[#F8F7FF]">
+      <div className="max-w-7xl mx-auto px-8 mb-4">
+        <span className="text-[#7C3AED] text-[10px] font-mono tracking-[0.5em] uppercase mb-4 block">
+          Codorah // Services
+        </span>
+        <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter uppercase italic text-[#0F0A1E] border-l-4 border-[#7C3AED] pl-6">
+          Nos <span className="text-[#7C3AED]">Services</span>
         </h1>
-        <p className="text-gray-400 max-w-2xl text-lg leading-relaxed mb-16">
-          De l'audit de sécurité à l'intégration d'intelligence artificielle, découvrez comment notre expertise technique peut accélérer votre transformation numérique.
+        <p className="text-[#6B7280] max-w-2xl text-lg leading-relaxed">
+          Des solutions numériques concrètes — sites web, applications mobiles et formations IA — pour accélérer votre transformation digitale.
         </p>
-        
-        {/* Placeholder for service cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-8 border border-white/5 bg-white/5 rounded-sm hover:border-codorah-neonViolet transition-colors">
-            <h3 className="text-xl font-bold mb-4">Audit de Sécurité</h3>
-            <p className="text-sm text-gray-500">Sécurisez votre infrastructure face aux menaces modernes.</p>
-          </div>
-          <div className="p-8 border border-white/5 bg-white/5 rounded-sm hover:border-codorah-neonViolet transition-colors">
-            <h3 className="text-xl font-bold mb-4">Architecture Cloud</h3>
-            <p className="text-sm text-gray-500">Des infrastructures scalables et résilientes pour votre croissance.</p>
-          </div>
-          <div className="p-8 border border-white/5 bg-white/5 rounded-sm hover:border-codorah-neonViolet transition-colors">
-            <h3 className="text-xl font-bold mb-4">Intégration IA</h3>
-            <p className="text-sm text-gray-500">Automatisation via l'Intelligence Artificielle et LLMs.</p>
-          </div>
-        </div>
       </div>
+      <ServicesGrid />
     </div>
   );
 }
