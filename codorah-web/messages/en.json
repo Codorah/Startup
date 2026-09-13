@@ -1,0 +1,569 @@
+{
+  "meta": {
+    "title": "Codorah | Software Engineering, AI Solutions & Digital Academy",
+    "description": "Codorah empowers global enterprises and talents with bespoke software engineering, enterprise AI systems, and elite digital bootcamps."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "trainings": "Training",
+    "whyUs": "Why Us",
+    "projects": "Projects",
+    "gallery": "Gallery",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "requestQuote": "Request a Quote",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "TECH ENGINEERING & DIGITAL ACADEMY",
+    "titleLine1": "We build",
+    "titleLine2": "your digital",
+    "titleLine3": "solutions.",
+    "description": "Custom development, Artificial Intelligence, Cloud & DevOps, Cybersecurity — and practical training programs to accelerate your talent.",
+    "primaryCta": "Start Your Project",
+    "secondaryCta": "Explore Training"
+  },
+  "pitch": {
+    "item1": {
+      "icon": "Zap",
+      "title": "Fast Delivery",
+      "desc": "Sprint-based delivery with maximum velocity and zero compromise on quality."
+    },
+    "item2": {
+      "icon": "BrainCircuit",
+      "title": "AI & Cloud Expertise",
+      "desc": "AWS and GCP certified engineers specialized in generative models and embedded ML."
+    },
+    "item3": {
+      "icon": "GraduationCap",
+      "title": "Elite Training Programs",
+      "desc": "Intensive bootcamps led by industry practitioners to train tomorrow's tech talents."
+    }
+  },
+  "immersive": {
+    "tagline": "OUR MISSION",
+    "title": "We transform your ideas into digital solutions that change the game.",
+    "subtitle": "From startups to multinationals, Codorah designs robust software architectures, integrates AI into your workflows, and trains your teams for tomorrow's technological challenges.",
+    "cta": "Discover Our Approach",
+    "stat1": { "value": "150+", "label": "Projects delivered" },
+    "stat2": { "value": "2,500+", "label": "Talents trained" },
+    "stat3": { "value": "99.9%", "label": "Guaranteed uptime" }
+  },
+  "services": {
+    "badge": "OUR EXPERTISE",
+    "title": "End-to-end solutions for your digital transformation",
+    "items": [
+      {
+        "id": "web-mobile",
+        "icon": "Smartphone",
+        "title": "Web & Mobile Development",
+        "description": "Blazing-fast web platforms and native/cross-platform mobile apps designed for frictionless user experiences. Next.js, Flutter, React Native — we choose the right technology for your project.",
+        "link": "Explore this expertise",
+        "image": "/images/service-web-mobile.jpg",
+        "imageAlt": "Web and mobile development"
+      },
+      {
+        "id": "ai-ml",
+        "icon": "Cpu",
+        "title": "Artificial Intelligence & ML",
+        "description": "Intelligent automation, predictive models, and conversational agents trained on your enterprise data. We deploy LLMs, vision systems, and recommendation engines tailored to your real business needs.",
+        "link": "Explore this expertise",
+        "image": "/images/service-ai.jpg",
+        "imageAlt": "Artificial intelligence and machine learning"
+      },
+      {
+        "id": "cloud-devops",
+        "icon": "Cloud",
+        "title": "Cloud & DevOps",
+        "description": "Resilient cloud architectures on AWS, Azure, or GCP with containerization, Kubernetes orchestration, and high-velocity CI/CD pipelines. Zero downtime. Infrastructure as Code. Guaranteed high availability.",
+        "link": "Explore this expertise",
+        "image": "/images/service-cloud.jpg",
+        "imageAlt": "Cloud and DevOps solutions"
+      },
+      {
+        "id": "ui-ux",
+        "icon": "Palette",
+        "title": "UI/UX & Product Design",
+        "description": "Interfaces that convert and engage. We practice user research, rapid prototyping, and modular design systems to create memorable digital experiences.",
+        "link": "Explore this expertise",
+        "image": "/images/service-design.jpg",
+        "imageAlt": "UI/UX and product design"
+      },
+      {
+        "id": "cybersecurity",
+        "icon": "ShieldCheck",
+        "title": "Cybersecurity & Audits",
+        "description": "Complete protection of your digital assets: penetration testing, secure code review, GDPR compliance, and security policy implementation to protect your infrastructure and data.",
+        "link": "Explore this expertise",
+        "image": "/images/service-security.jpg",
+        "imageAlt": "Cybersecurity and audits"
+      },
+      {
+        "id": "custom-software",
+        "icon": "Code2",
+        "title": "Custom Software & SaaS",
+        "description": "Modular ERPs, enterprise applications, and scalable multi-tenant SaaS platforms. We architect systems capable of handling millions of requests without breaking a sweat.",
+        "link": "Explore this expertise",
+        "image": "/images/service-custom.jpg",
+        "imageAlt": "Custom software development"
+      },
+      {
+        "id": "training",
+        "icon": "GraduationCap",
+        "title": "Codorah Academy — Training",
+        "description": "Intensive bootcamps in web development, practical AI, cybersecurity, and computer basics. Training led by practicing engineers, focused on real projects, and rewarded with a recognized certificate.",
+        "link": "See Programs",
+        "image": "/images/training-coding.jpg",
+        "imageAlt": "Codorah Academy digital training"
+      }
+    ]
+  },
+  "concept": {
+    "badge": "OUR PHILOSOPHY",
+    "title": "A revolutionary concept of tech partnership",
+    "subtitle": "We don't sell services — we co-build your digital success.",
+    "features": [
+      { "icon": "Rocket", "label": "Scalable Architecture" },
+      { "icon": "ShieldCheck", "label": "Security by Design" },
+      { "icon": "Users", "label": "Dedicated Teams" },
+      { "icon": "BarChart3", "label": "Measurable KPIs" },
+      { "icon": "Clock", "label": "Sprint Deliveries" },
+      { "icon": "Globe", "label": "International Reach" }
+    ]
+  },
+  "mediaGrid": {
+    "badge": "MEDIA LIBRARY",
+    "title": "Codorah in action",
+    "items": [
+      {
+        "id": "m1",
+        "title": "National 48h Code Hackathon",
+        "category": "Tech Event",
+        "image": "/images/gallery-hackathon-coding.jpg"
+      },
+      {
+        "id": "m2",
+        "title": "High-availability cloud architecture for clients",
+        "category": "Infrastructure",
+        "image": "/images/gallery-datacenter-cloud.jpg"
+      },
+      {
+        "id": "m3",
+        "title": "Graduation Ceremony — Codorah Class of 2025",
+        "category": "Training",
+        "image": "/images/gallery-graduation-students.jpg"
+      },
+      {
+        "id": "m4",
+        "title": "Generative AI Keynote & Business Opportunities",
+        "category": "Conference",
+        "image": "/images/gallery-ai-presentation.jpg"
+      }
+    ]
+  },
+  "trainings": {
+    "badge": "DIGITAL ACADEMY",
+    "title": "World-Class Training for Tomorrow's Tech Careers",
+    "subtitle": "Accelerate your digital skills with practical programs led by practicing engineers.",
+    "ctaLabel": "View all programs",
+    "count": "4 programs available",
+    "enrollBtn": "Enroll Now",
+    "items": [
+      {
+        "id": "initiation",
+        "title": "Computer Fundamentals & Office Productivity",
+        "duration": "4–6 weeks",
+        "level": "Beginner",
+        "format": "In-person & Online",
+        "category": "Fundamentals",
+        "description": "Master digital environment basics, advanced office tools, and online collaboration fundamentals.",
+        "image": "/images/training-basics.jpg"
+      },
+      {
+        "id": "fullstack",
+        "title": "Full-Stack Web & Mobile Bootcamp",
+        "duration": "12–16 weeks",
+        "level": "Intermediate",
+        "format": "Intensive Hybrid",
+        "category": "Development",
+        "description": "Learn to build complete applications: JavaScript, TypeScript, React, Next.js, APIs, and production deployment.",
+        "image": "/images/training-coding.jpg"
+      },
+      {
+        "id": "cyber",
+        "title": "Cybersecurity & Digital Hygiene",
+        "duration": "6–8 weeks",
+        "level": "All levels",
+        "format": "Online with Workshops",
+        "category": "Security",
+        "description": "Understand attack vectors, apply defense protocols, and ensure your organization's data compliance.",
+        "image": "/images/training-cybersecurity.jpg"
+      },
+      {
+        "id": "ai-bootcamp",
+        "title": "Practical AI & Generative Tools",
+        "duration": "4–8 weeks",
+        "level": "All levels",
+        "format": "Hybrid & Masterclasses",
+        "category": "Artificial Intelligence",
+        "description": "Master ChatGPT, Claude, Midjourney. Practice Prompt Engineering and automate your workflows.",
+        "image": "/images/training-ai.jpg"
+      }
+    ]
+  },
+  "whyUs": {
+    "badge": "WHY CODORAH",
+    "title": "Why choose Codorah?",
+    "items": [
+      {
+        "id": "dynamisme",
+        "title": "Reactivity & Dynamism",
+        "description": "Codorah stands out for its exceptional responsiveness. Short sprints, frequent deliveries, transparent communication — we adapt to your pace and urgencies with the same technical rigor.",
+        "image": "/images/why-us-agile-sprint.jpg",
+        "imageAlt": "Codorah team in an agile collaborative sprint"
+      },
+      {
+        "id": "fiabilite",
+        "title": "Reliability & Technical Excellence",
+        "description": "Every architecture we design meets the strictest standards of performance and security. High-availability infrastructure, proactive monitoring, and guaranteed SLAs for your mission-critical applications.",
+        "image": "/images/why-us-cloud-engineer.jpg",
+        "imageAlt": "Certified Codorah cloud infrastructure engineer in data center"
+      },
+      {
+        "id": "efficacite",
+        "title": "Efficiency & Measurable Impact",
+        "description": "We measure our success by the real impact generated for your users and business. KPIs defined upfront, weekly reporting, and dashboards to track value created at each sprint.",
+        "image": "/images/why-us-tech-analytics.jpg",
+        "imageAlt": "Executives and engineers reviewing live KPIs and business impact"
+      },
+      {
+        "id": "innovation",
+        "title": "Innovation & Tech Vanguard",
+        "description": "We continuously explore new technological frontiers: generative AI, edge architectures, WebAssembly, specialized language models — to give you a sustainable competitive advantage.",
+        "image": "/images/why-us-ai-innovation.jpg",
+        "imageAlt": "AI engineer in cutting-edge tech research lab"
+      }
+    ]
+  },
+  "ctaBanner": {
+    "tagline": "READY TO START?",
+    "title": "Join the companies that trust Codorah.",
+    "subtitle": "Whether for custom development, AI integration, or team training — get started in 48 hours.",
+    "primaryCta": "Book a Consultation",
+    "secondaryCta": "View Our Work"
+  },
+  "partners": {
+    "title": "Our Partners & Clients"
+  },
+  "trust": {
+    "badge": "TRUSTED BY INDUSTRY LEADERS",
+    "heading": "Leading organizations transforming their digital future with Codorah",
+    "stat1": { "value": "10+", "label": "Years of Combined Tech Expertise" },
+    "stat2": { "value": "150+", "label": "Digital Software Projects Shipped" },
+    "stat3": { "value": "2,500+", "label": "Talents & Professionals Trained" },
+    "stat4": { "value": "99.9%", "label": "Guaranteed Reliability & Uptime" }
+  },
+  "projects": {
+    "badge": "PROJECTS & IMPACT",
+    "title": "Real projects shaping industries",
+    "subtitle": "A selection of digital platforms, fintech, agritech, and edtech solutions built by our team.",
+    "viewProject": "View Project",
+    "allProjects": "Explore All Projects",
+    "items": [
+      {
+        "id": "cfa-express",
+        "title": "CFA Express",
+        "category": "Fintech & Fund Transfer",
+        "logo": "/projects/cfa-express.png",
+        "impact": "+450k secured transactions",
+        "description": "Instant transactional platform and high-resilience currency transfer gateway.",
+        "tech": ["Next.js", "Node.js", "PostgreSQL", "Banking APIs"]
+      },
+      {
+        "id": "agro-capital",
+        "title": "Agro-Capital",
+        "category": "AgriTech & Investment",
+        "logo": "/projects/agro-capital.png",
+        "impact": "3.2x investment growth",
+        "description": "Crowdfunding system and farm traceability platform connecting investors and local cooperatives.",
+        "tech": ["React", "Python/FastAPI", "GeoJSON", "Cloud Run"]
+      },
+      {
+        "id": "pharmalink",
+        "title": "PharmaLink",
+        "category": "HealthTech & Pharmacy Management",
+        "logo": "/projects/pharmalink.webp",
+        "impact": "-65% inventory shortages",
+        "description": "Intelligent pharmaceutical supply network and automated inventory management.",
+        "tech": ["Flutter", "TypeScript", "Redis", "Docker"]
+      },
+      {
+        "id": "edufast",
+        "title": "EduFast Academy",
+        "category": "EdTech & E-Learning",
+        "logo": "/projects/edufast academy.webp",
+        "impact": "15,000+ active students",
+        "description": "Adaptive learning platform with online exams and blockchain certification.",
+        "tech": ["Next.js", "WebRTC", "Tailwind CSS", "MongoDB"]
+      },
+      {
+        "id": "eganye",
+        "title": "Eganye",
+        "category": "Fintech & Digital Commerce",
+        "logo": "/projects/eganye.png",
+        "impact": "+280% B2B commercial volume",
+        "description": "Unified merchant collection portal and secure professional exchange marketplace.",
+        "tech": ["React Native", "Spring Boot", "Kafka", "AWS"]
+      },
+      {
+        "id": "miklpanu",
+        "title": "Miklpanu",
+        "category": "E-Commerce & Supply Chain",
+        "logo": "/projects/miklpanu.png",
+        "impact": "Average delivery under 2h",
+        "description": "Local logistics distribution platform with real-time GPS courier tracking.",
+        "tech": ["Vue.js", "Node.js", "WebSockets", "Mapbox"]
+      },
+      {
+        "id": "heritogo",
+        "title": "HeriToGo",
+        "category": "Culture & Digital Tourism",
+        "logo": "/projects/heritogo.avif",
+        "impact": "+120% tourist engagement",
+        "description": "Interactive guide showcasing cultural heritage with guided geolocation.",
+        "tech": ["PWA", "Next.js", "Supabase", "Stripe"]
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "TESTIMONIALS",
+    "title": "What our clients say about us",
+    "subtitle": "Our partners' satisfaction is the true measure of our success.",
+    "items": [
+      {
+        "id": "1",
+        "name": "Alexandre Lawson",
+        "role": "CIO",
+        "company": "Pan-African Financial Group",
+        "avatar": "/images/avatar-2.jpg",
+        "quote": "Codorah completely transformed our payment infrastructure. Their technical rigor and understanding of regulatory issues are impressive.",
+        "rating": 5
+      },
+      {
+        "id": "2",
+        "name": "Sarah Mensah",
+        "role": "CEO & Founder",
+        "company": "EduFast Global",
+        "avatar": "/images/avatar-1.jpg",
+        "quote": "The team designed our e-learning platform in record time with a level of polish worthy of the world's best standards.",
+        "rating": 5
+      },
+      {
+        "id": "3",
+        "name": "Dr. Jean-Marc Koffi",
+        "role": "Head of Medical Innovation",
+        "company": "PharmaSanté Network",
+        "avatar": "/images/avatar-4.jpg",
+        "quote": "Thanks to PharmaLink, we've eliminated pharmaceutical inventory bottlenecks. Codorah is an indispensable strategic partner.",
+        "rating": 5
+      },
+      {
+        "id": "4",
+        "name": "Aminata Diallo",
+        "role": "Web Bootcamp Alumni & Tech Lead",
+        "company": "Fintech Incubator",
+        "avatar": "/images/avatar-3.jpg",
+        "quote": "Codorah's intensive training took me from beginner to operational fullstack developer. The instructors are exceptional.",
+        "rating": 5
+      }
+    ]
+  },
+  "gallery": {
+    "badge": "CODORAH IMMERSION & LEADERSHIP",
+    "title": "Life at the heart of our ecosystem",
+    "subtitle": "Discover our international keynotes, software engineering teams in action, and executive leadership.",
+    "all": "All photos",
+    "cat_leadership": "Leadership & CEO",
+    "cat_events": "Conferences & Summits",
+    "cat_training": "Training & Workshops",
+    "cat_tech": "Development & Engineering",
+    "cat_team": "Team & Collaborations",
+    "items": [
+      {
+        "id": "ceo-elearning-photocall",
+        "title": "Mrs. Elodie H. ATANA — eLearning Africa International Summit",
+        "category": "cat_leadership",
+        "image": "/images/elodie-atana-elearning-photocall.jpg",
+        "desc": "Codorah's CEO & Founder at the official photocall of the 19th International Conference on Digital Education & Training in Africa.",
+        "location": "Accra, Ghana",
+        "tag": "Leadership & Vision"
+      },
+      {
+        "id": "ceo-elearning-stage",
+        "title": "Main Stage Keynote at eLearning Africa",
+        "category": "cat_leadership",
+        "image": "/images/elodie-atana-elearning-africa-stage.jpg",
+        "desc": "Keynote address by Elodie H. ATANA before international delegations, ministers, and African tech innovators.",
+        "location": "Accra, Ghana",
+        "tag": "International Keynote"
+      },
+      {
+        "id": "ceo-giz-summit",
+        "title": "Address at Togolese Digital Transformation Summit (EU & GIZ)",
+        "category": "cat_leadership",
+        "image": "/images/elodie-atana-giz-summit.jpg",
+        "desc": "Elodie H. ATANA speaking on private-public synergies with the European Union and GIZ to accelerate Togo's digital economy.",
+        "location": "Lomé, Togo",
+        "tag": "International Partnership"
+      },
+      {
+        "id": "ceo-award",
+        "title": "Official Recognition & Award — Republic of Togo",
+        "category": "cat_leadership",
+        "image": "/images/elodie-atana-award.jpg",
+        "desc": "Excellence recognition awarded to Mrs. Elodie H. ATANA by the Ministry of Digital Transformation and Public Sector Efficiency.",
+        "location": "Lomé, Togo",
+        "tag": "Official Recognition"
+      },
+      {
+        "id": "ceo-elearning-speech",
+        "title": "Advocacy for Digital Skills and Tech Excellence in Africa",
+        "category": "cat_leadership",
+        "image": "/images/elodie-atana-elearning-speech.jpg",
+        "desc": "Podium address by Elodie H. ATANA highlighting the strategic importance of practical software training for African youth.",
+        "location": "Accra, Ghana",
+        "tag": "Pan-African Impact"
+      },
+      {
+        "id": "g1",
+        "title": "Intensive bootcamp in connected classroom",
+        "category": "cat_training",
+        "image": "/images/gallery-training-classroom.jpg",
+        "desc": "Our students in collaborative programming exercises and software architecture challenges.",
+        "location": "Lomé, Togo",
+        "tag": "Codorah Bootcamp"
+      },
+      {
+        "id": "g2",
+        "title": "Design sprint & UI/UX prototyping",
+        "category": "cat_team",
+        "image": "/images/gallery-uiux-sprint.jpg",
+        "desc": "User interface co-creation workshop and conversion-driven design systems.",
+        "location": "Lomé, Togo",
+        "tag": "Product Design"
+      },
+      {
+        "id": "g3",
+        "title": "Code hackathon & Night of innovation",
+        "category": "cat_tech",
+        "image": "/images/gallery-hackathon-coding.jpg",
+        "desc": "48-hour algorithmic challenge and MVP sprint by Codorah talents.",
+        "location": "Lomé, Togo",
+        "tag": "48h Hackathon"
+      },
+      {
+        "id": "g4",
+        "title": "Graduation ceremony — Tech class",
+        "category": "cat_training",
+        "image": "/images/gallery-graduation-students.jpg",
+        "desc": "Celebrating certified developers and engineers ready for top companies worldwide.",
+        "location": "Lomé, Togo",
+        "tag": "Graduation Class"
+      },
+      {
+        "id": "g5",
+        "title": "Cloud architecture & Secure infrastructure",
+        "category": "cat_tech",
+        "image": "/images/gallery-datacenter-cloud.jpg",
+        "desc": "Deployment, proactive monitoring, and high-availability enterprise cluster supervision.",
+        "location": "Cloud Infrastructure",
+        "tag": "Cloud & DevOps"
+      },
+      {
+        "id": "g6",
+        "title": "AI keynote & Conference",
+        "category": "cat_events",
+        "image": "/images/gallery-ai-presentation.jpg",
+        "desc": "Presenting generative model advances and enterprise implementation strategies.",
+        "location": "Paris / Lomé",
+        "tag": "Artificial Intelligence"
+      },
+      {
+        "id": "g7",
+        "title": "Team collaboration & Product strategy",
+        "category": "cat_team",
+        "image": "/images/gallery-team-collaboration.jpg",
+        "desc": "Sprint reviews and technical architecture alignment between senior engineers.",
+        "location": "Lomé, Togo",
+        "tag": "Software Engineering"
+      },
+      {
+        "id": "g8",
+        "title": "Tech Summit & Strategic Partnerships",
+        "category": "cat_events",
+        "image": "/images/gallery-tech-summit.jpg",
+        "desc": "Annual digital industry gathering and partnership agreements.",
+        "location": "West Africa",
+        "tag": "Tech Partnerships"
+      }
+    ]
+  },
+  "cta": {
+    "badge": "BRING YOUR PROJECTS TO LIFE",
+    "title": "Ready to propel your business into the digital future?",
+    "subtitle": "Whether you need a custom application, an AI deployment, or training for your teams, our experts are here.",
+    "button": "Request a Free Consultation",
+    "subtext": "Response within 24h • No-commitment quote • Full confidentiality"
+  },
+  "modal": {
+    "title": "Let's talk about your project",
+    "subtitle": "Fill out this form and one of our project directors will contact you quickly.",
+    "name": "Full Name",
+    "namePlaceholder": "e.g. John Smith",
+    "email": "Professional Email Address",
+    "emailPlaceholder": "john@company.com",
+    "phone": "Phone / WhatsApp",
+    "phonePlaceholder": "+1 555 123 4567",
+    "service": "Type of Need",
+    "serviceOptions": {
+      "select": "Select your main need",
+      "webMobile": "Web & Mobile Development",
+      "ai": "Artificial Intelligence & Automation",
+      "cloud": "Cloud, DevOps & Hosting",
+      "design": "UI/UX Design & Redesign",
+      "security": "Audit & Cybersecurity",
+      "training": "Digital Skills Training",
+      "other": "Other custom request"
+    },
+    "budget": "Estimated Budget",
+    "budgetOptions": {
+      "select": "Select a budget range",
+      "tier1": "< €5,000",
+      "tier2": "€5,000 – €15,000",
+      "tier3": "€15,000 – €50,000",
+      "tier4": "> €50,000",
+      "training": "Training financing / grants"
+    },
+    "message": "Briefly describe your project or goals",
+    "messagePlaceholder": "Application details, desired timelines, target audience...",
+    "submit": "Send My Request",
+    "sending": "Sending...",
+    "success": "Thank you! Your request was received. Our team will contact you within 24h.",
+    "close": "Close"
+  },
+  "footer": {
+    "tagline": "Architects of exceptional digital solutions and elite trainers for tomorrow's leaders.",
+    "solutionsTitle": "Solutions & Services",
+    "trainingsTitle": "Academy & Training",
+    "companyTitle": "Company",
+    "legalTitle": "Legal & Ethics",
+    "about": "About Codorah",
+    "careers": "Careers & Hiring",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "legalNotice": "Legal Notice",
+    "rights": "All rights reserved. Codorah SARL.",
+    "builtWith": "Built with passion & technical rigor."
+  }
+}

@@ -1,0 +1,384 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* ============================================================
+   DESIGN TOKENS — Codorah Brand System
+============================================================ */
+:root {
+  /* Violet brand */
+  --violet-50:  #f5f3ff;
+  --violet-100: #ede9fe;
+  --violet-200: #ddd6fe;
+  --violet-300: #c4b5fd;
+  --violet-400: #a78bfa;
+  --violet-500: #8b5cf6;
+  --violet-600: #7c3aed;
+  --violet-700: #6d28d9;
+  --violet-800: #5b21b6;
+  --violet-900: #2e1065;
+
+  /* Slate neutrals */
+  --slate-50:   #f8fafc;
+  --slate-100:  #f1f5f9;
+  --slate-200:  #e2e8f0;
+  --slate-300:  #cbd5e1;
+  --slate-400:  #94a3b8;
+  --slate-500:  #64748b;
+  --slate-600:  #475569;
+  --slate-700:  #334155;
+  --slate-800:  #1e293b;
+  --slate-900:  #0f172a;
+  --slate-950:  #080c18;
+
+  /* Spacing & radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-3xl: 40px;
+}
+
+/* ============================================================
+   BASE
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--slate-900);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::selection {
+  background: var(--violet-600);
+  color: #ffffff;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+============================================================ */
+.display-xl {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+}
+
+.display-lg {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.display-md {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+/* ============================================================
+   COLOR UTILITIES
+============================================================ */
+.text-gradient-violet {
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 60%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* ============================================================
+   BACKGROUNDS
+============================================================ */
+.bg-grid-dots {
+  background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-violet-subtle {
+  background: linear-gradient(180deg, #fefeff 0%, #f8f5ff 50%, #fefeff 100%);
+}
+
+/* ============================================================
+   WAVE SVG SECTION (like solimi.co)
+============================================================ */
+.wave-top {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-top svg,
+.wave-bottom svg {
+  display: block;
+  width: 100%;
+}
+.wave-bottom {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotateX(180deg);
+}
+
+/* ============================================================
+   PITCH BLOCK
+============================================================ */
+.pitch-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 1.25rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+  text-align: center;
+}
+.pitch-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -8px rgba(124,58,237,0.12);
+}
+
+/* ============================================================
+   SERVICE ALTERNATING
+============================================================ */
+.service-image-hover {
+  transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.service-image-hover:hover {
+  transform: scale(1.03);
+}
+
+/* ============================================================
+   MEDIA GRID (hover reveal like solimi)
+============================================================ */
+.media-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.media-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, transparent, rgba(109,91,240,0.5), rgba(74,34,189,0.85));
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.media-card:hover .media-card-overlay {
+  opacity: 1;
+}
+.media-card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.media-card:hover .media-card-text {
+  transform: translateY(0);
+}
+.media-card img {
+  transition: transform 0.4s ease;
+}
+.media-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================================
+   MARQUEE INFINITE SCROLL
+============================================================ */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track,
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.marquee-track:hover,
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+.btn-violet {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  background: var(--violet-600);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  box-shadow: 0 4px 20px rgba(124,58,237,0.3);
+  text-decoration: none;
+}
+.btn-violet:hover {
+  background: var(--violet-700);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(124,58,237,0.38);
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.9);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--slate-800);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1.5px solid var(--slate-200);
+  text-decoration: none;
+}
+.btn-outline-dark:hover {
+  border-color: var(--violet-400);
+  color: var(--violet-700);
+  background: var(--violet-50);
+}
+
+/* ============================================================
+   SECTION LABELS
+============================================================ */
+.section-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--violet-600);
+}
+
+/* ============================================================
+   CARDS
+============================================================ */
+.card-hover {
+  border: 1px solid var(--slate-200);
+  background: #ffffff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
+}
+.card-hover:hover {
+  border-color: var(--violet-300);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px -8px rgba(124,58,237,0.1);
+}
+
+/* ============================================================
+   GLASSMORPHISM ICON BOX (solimi style)
+============================================================ */
+.glass-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background: linear-gradient(to right, transparent, rgba(139,92,246,0.2));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(124,58,237,0.15);
+}
+
+/* ============================================================
+   SWIPER PAGINATION OVERRIDES
+============================================================ */
+.swiper-pagination-bullet {
+  background: #cbd5e1 !important;
+  opacity: 1;
+  width: 7px !important;
+  height: 7px !important;
+  transition: all 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+  background: var(--violet-600) !important;
+  width: 26px !important;
+  border-radius: 9999px !important;
+}
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+============================================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #a78bfa; }
+
+/* ============================================================
+   FOCUS (A11y)
+============================================================ */
+:focus-visible {
+  outline: 2px solid var(--violet-600);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+}
