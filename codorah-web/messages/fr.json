@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Codorah | Ingénierie Logicielle, Solutions IA & Académie du Numérique",
-    "description": "Codorah propulse les entreprises et les talents avec des solutions logicielles sur-mesure, de l'IA de pointe et des formations technologiques d'élite."
+    "description": "Codorah est une initiative togolaise du numérique qui accompagne la conception de solutions web, IA et de formations pratiques."
   },
   "nav": {
     "home": "Accueil",
@@ -28,27 +28,36 @@
     "item1": {
       "icon": "Zap",
       "title": "Développement Rapide",
-      "desc": "Livraison sprint par sprint avec une vélocité maximale et zéro compromis sur la qualité."
+      "desc": "Une méthode de travail itérative, avec des livraisons définies selon les priorités du projet."
     },
     "item2": {
       "icon": "BrainCircuit",
       "title": "Expertise IA & Cloud",
-      "desc": "Des ingénieurs certifiés AWS, GCP et spécialisés en modèles génératifs et ML embarqué."
+      "desc": "Une approche pragmatique de l’IA, du cloud et de l’automatisation, adaptée à chaque besoin."
     },
     "item3": {
       "icon": "GraduationCap",
       "title": "Formations d'Élite",
-      "desc": "Bootcamps intensifs animés par des praticiens du terrain pour former les talents de demain."
+      "desc": "Des ateliers et parcours pratiques pour développer des compétences numériques utiles."
     }
   },
   "immersive": {
     "tagline": "NOTRE MISSION",
-    "title": "Nous transformons vos idées en solutions numériques qui changent la donne.",
-    "subtitle": "De la startup à la multinationale, Codorah conçoit des architectures logicielles robustes, intègre l'intelligence artificielle à vos processus et forme vos équipes aux défis technologiques de demain.",
+    "title": "Nous transformons vos idées en solutions numériques utiles et adaptées au contexte local.",
+    "subtitle": "Codorah accompagne des porteurs de projet, organisations et équipes dans la conception de produits numériques, l’exploration de l’IA et le renforcement de compétences.",
     "cta": "Découvrir notre approche",
-    "stat1": { "value": "150+", "label": "Projets livrés" },
-    "stat2": { "value": "2 500+", "label": "Talents formés" },
-    "stat3": { "value": "99.9%", "label": "Disponibilité garantie" }
+    "stat1": {
+      "value": "Web",
+      "label": "Solutions à concevoir"
+    },
+    "stat2": {
+      "value": "IA",
+      "label": "Usages à explorer"
+    },
+    "stat3": {
+      "value": "Numérique",
+      "label": "Compétences à développer"
+    }
   },
   "services": {
     "badge": "NOS EXPERTISES",
@@ -94,7 +103,7 @@
         "id": "cybersecurity",
         "icon": "ShieldCheck",
         "title": "Cybersécurité & Audits",
-        "description": "Protection complète de vos actifs numériques : tests d'intrusion, revue de code sécurisée, conformité RGPD et mise en œuvre de politiques de sécurité pour protéger votre infrastructure et vos données.",
+        "description": "Protection complète de vos actifs numériques : tests d'intrusion, revue de code sécurisée, bonnes pratiques de protection des données et mise en œuvre de politiques de sécurité pour protéger votre infrastructure et vos données.",
         "link": "Découvrir cette expertise",
         "image": "/images/service-security.jpg",
         "imageAlt": "Cybersécurité et audits"
@@ -124,12 +133,30 @@
     "title": "Un concept révolutionnaire de partenariat tech",
     "subtitle": "Nous ne vendons pas des services — nous co-construisons votre succès numérique.",
     "features": [
-      { "icon": "Rocket", "label": "Architecture Évolutive" },
-      { "icon": "ShieldCheck", "label": "Sécurité by Design" },
-      { "icon": "Users", "label": "Équipes Dédiées" },
-      { "icon": "BarChart3", "label": "KPIs Mesurables" },
-      { "icon": "Clock", "label": "Livraisons Sprint" },
-      { "icon": "Globe", "label": "Portée Internationale" }
+      {
+        "icon": "Rocket",
+        "label": "Architecture Évolutive"
+      },
+      {
+        "icon": "ShieldCheck",
+        "label": "Sécurité by Design"
+      },
+      {
+        "icon": "Users",
+        "label": "Équipes Dédiées"
+      },
+      {
+        "icon": "BarChart3",
+        "label": "KPIs Mesurables"
+      },
+      {
+        "icon": "Clock",
+        "label": "Livraisons Sprint"
+      },
+      {
+        "icon": "Globe",
+        "label": "Portée Internationale"
+      }
     ]
   },
   "mediaGrid": {
@@ -138,25 +165,25 @@
     "items": [
       {
         "id": "m1",
-        "title": "Hackathon national de code — 48h pour innover",
+        "title": "Atelier de code et de prototypage",
         "category": "Événement Tech",
         "image": "/images/gallery-hackathon-coding.jpg"
       },
       {
         "id": "m2",
-        "title": "Architecture Cloud haute disponibilité pour nos clients",
+        "title": "Travail autour des environnements cloud",
         "category": "Infrastructure",
         "image": "/images/gallery-datacenter-cloud.jpg"
       },
       {
         "id": "m3",
-        "title": "Remise de diplômes — Promotion Codorah 2025",
+        "title": "Atelier de formation numérique",
         "category": "Formations",
         "image": "/images/gallery-graduation-students.jpg"
       },
       {
         "id": "m4",
-        "title": "Keynote IA Générative & Opportunités Entreprises",
+        "title": "Échanges autour de l'IA générative",
         "category": "Conférence",
         "image": "/images/gallery-ai-presentation.jpg"
       }
@@ -164,10 +191,10 @@
   },
   "trainings": {
     "badge": "ACADÉMIE DU NUMÉRIQUE",
-    "title": "Formations d'Excellence aux Métiers de Demain",
+    "title": "Des formations pratiques au numérique",
     "subtitle": "Accélérez vos compétences numériques avec des formations pratiques animées par des ingénieurs en exercice.",
     "ctaLabel": "Voir toutes les formations",
-    "count": "4 programmes disponibles",
+    "count": "Programmes à venir",
     "enrollBtn": "S'inscrire",
     "items": [
       {
@@ -225,10 +252,10 @@
       },
       {
         "id": "fiabilite",
-        "title": "Fiabilité & Excellence Technique",
-        "description": "Chaque architecture que nous concevons respecte les standards les plus stricts de performance et de sécurité. Infrastructure haute disponibilité, monitoring proactif et SLA garantis pour vos applications critiques.",
+        "title": "Une attention portée à la qualité",
+        "description": "Chaque architecture que nous concevons respecte les standards les plus stricts de performance et de sécurité. Infrastructure haute disponibilité, monitoring proactif et engagements définis selon le projet pour vos applications critiques.",
         "image": "/images/why-us-cloud-engineer.jpg",
-        "imageAlt": "Ingénieur cloud certifié Codorah en datacenter"
+        "imageAlt": "Professionnel travaillant sur une infrastructure cloud"
       },
       {
         "id": "efficacite",
@@ -248,8 +275,8 @@
   },
   "ctaBanner": {
     "tagline": "PRÊT À DÉMARRER ?",
-    "title": "Rejoignez les entreprises qui font confiance à Codorah.",
-    "subtitle": "Que ce soit pour un développement sur-mesure, une intégration IA, ou une formation de vos équipes — démarrez en 48h.",
+    "title": "Parlons de votre projet numérique.",
+    "subtitle": "Développement sur mesure, intégration d’IA ou formation : échangeons pour définir une approche adaptée à vos objectifs.",
     "primaryCta": "Demander une consultation",
     "secondaryCta": "Voir nos réalisations"
   },
@@ -259,10 +286,22 @@
   "trust": {
     "badge": "ILS NOUS FONT CONFIANCE",
     "heading": "Des partenaires & entreprises qui transforment leur avenir avec Codorah",
-    "stat1": { "value": "10+", "label": "Années d'expertise combinée" },
-    "stat2": { "value": "150+", "label": "Projets logiciels délivrés" },
-    "stat3": { "value": "2 500+", "label": "Apprenants & talents formés" },
-    "stat4": { "value": "99.9%", "label": "Fiabilité & disponibilité garantie" }
+    "stat1": {
+      "value": "10+",
+      "label": "Années d'expertise combinée"
+    },
+    "stat2": {
+      "value": "Web",
+      "label": "Projets logiciels délivrés"
+    },
+    "stat3": {
+      "value": "IA",
+      "label": "Apprenants & talents formés"
+    },
+    "stat4": {
+      "value": "Numérique",
+      "label": "Fiabilité & disponibilité garantie"
+    }
   },
   "projects": {
     "badge": "RÉALISATIONS & IMPACT",
@@ -278,7 +317,12 @@
         "logo": "/projects/cfa-express.png",
         "impact": "+450k transactions sécurisées",
         "description": "Plateforme transactionnelle instantanée et passerelle de transfert de devises à haute résilience.",
-        "tech": ["Next.js", "Node.js", "PostgreSQL", "Banking APIs"]
+        "tech": [
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Banking APIs"
+        ]
       },
       {
         "id": "agro-capital",
@@ -287,7 +331,12 @@
         "logo": "/projects/agro-capital.png",
         "impact": "3.2x croissance des investissements",
         "description": "Système de financement participatif et de traçabilité des exploitations agricoles.",
-        "tech": ["React", "Python/FastAPI", "GeoJSON", "Cloud Run"]
+        "tech": [
+          "React",
+          "Python/FastAPI",
+          "GeoJSON",
+          "Cloud Run"
+        ]
       },
       {
         "id": "pharmalink",
@@ -296,7 +345,12 @@
         "logo": "/projects/pharmalink.webp",
         "impact": "-65% de ruptures d'inventaire",
         "description": "Réseau intelligent d'approvisionnement pharmaceutique et gestion automatisée des stocks.",
-        "tech": ["Flutter", "TypeScript", "Redis", "Docker"]
+        "tech": [
+          "Flutter",
+          "TypeScript",
+          "Redis",
+          "Docker"
+        ]
       },
       {
         "id": "edufast",
@@ -305,7 +359,12 @@
         "logo": "/projects/edufast academy.webp",
         "impact": "15 000+ étudiants actifs",
         "description": "Plateforme d'apprentissage adaptatif avec examens en ligne et certification blockchain.",
-        "tech": ["Next.js", "WebRTC", "Tailwind CSS", "MongoDB"]
+        "tech": [
+          "Next.js",
+          "WebRTC",
+          "Tailwind CSS",
+          "MongoDB"
+        ]
       },
       {
         "id": "eganye",
@@ -314,7 +373,12 @@
         "logo": "/projects/eganye.png",
         "impact": "+280% volume commercial B2B",
         "description": "Portail unifié d'encaissement marchand et marketplace d'échanges professionnels sécurisés.",
-        "tech": ["React Native", "Spring Boot", "Kafka", "AWS"]
+        "tech": [
+          "React Native",
+          "Spring Boot",
+          "Kafka",
+          "AWS"
+        ]
       },
       {
         "id": "miklpanu",
@@ -323,7 +387,12 @@
         "logo": "/projects/miklpanu.png",
         "impact": "Livraison moyenne sous 2h",
         "description": "Plateforme de distribution logistique avec tracking GPS temps réel.",
-        "tech": ["Vue.js", "Node.js", "WebSockets", "Mapbox"]
+        "tech": [
+          "Vue.js",
+          "Node.js",
+          "WebSockets",
+          "Mapbox"
+        ]
       },
       {
         "id": "heritogo",
@@ -332,7 +401,12 @@
         "logo": "/projects/heritogo.avif",
         "impact": "+120% d'engagement touristique",
         "description": "Guide interactif valorisant le patrimoine culturel avec géolocalisation guidée.",
-        "tech": ["PWA", "Next.js", "Supabase", "Stripe"]
+        "tech": [
+          "PWA",
+          "Next.js",
+          "Supabase",
+          "Stripe"
+        ]
       }
     ]
   },
@@ -391,121 +465,40 @@
     "cat_team": "Équipe & Collaborations",
     "items": [
       {
-        "id": "ceo-elearning-photocall",
-        "title": "Mme Elodie H. ATANA — Sommet International eLearning Africa",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-elearning-photocall.jpg",
-        "desc": "La CEO et fondatrice de Codorah au photocall officiel de la 19ème Conférence Internationale sur l'éducation et la formation numérique en Afrique.",
-        "location": "Accra, Ghana",
-        "tag": "Leadership & Vision"
-      },
-      {
-        "id": "ceo-elearning-stage",
-        "title": "Keynote officielle à eLearning Africa sur la grande scène",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-elearning-africa-stage.jpg",
-        "desc": "Prise de parole d'Elodie H. ATANA devant les délégations internationales, ministres et décideurs de la tech africaine.",
-        "location": "Accra, Ghana",
-        "tag": "Keynote Internationale"
-      },
-      {
-        "id": "ceo-giz-summit",
-        "title": "Intervention au Sommet Transformation Digitale Togolaise (UE & GIZ)",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-giz-summit.jpg",
-        "desc": "Plaidoyer d'Elodie H. ATANA auprès des partenaires internationaux (Union Européenne et GIZ) pour accélérer l'écosystème numérique togolais.",
-        "location": "Lomé, Togo",
-        "tag": "Partenariat International"
-      },
-      {
-        "id": "ceo-award",
-        "title": "Remise officielle d'attestation de participation & reconnaissance",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-award.jpg",
-        "desc": "Reconnaissance d'excellence décernée à Mme Elodie H. ATANA par le Ministère délégué chargé de la Transformation Numérique.",
-        "location": "Lomé, Togo",
-        "tag": "Reconnaissance Officielle"
-      },
-      {
-        "id": "ceo-elearning-speech",
-        "title": "Plaidoyer pour l'accélération des compétences technologiques en Afrique",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-elearning-speech.jpg",
-        "desc": "Intervention au pupitre d'Elodie H. ATANA axée sur l'employabilité et la formation pratique aux métiers de pointe du numérique.",
-        "location": "Accra, Ghana",
-        "tag": "Impact Panafricain"
-      },
-      {
-        "id": "g1",
-        "title": "Bootcamp intensif en salle connectée",
-        "category": "cat_training",
-        "image": "/images/gallery-training-classroom.jpg",
-        "desc": "Nos étudiants en plein exercice de programmation collaborative et architecture logicielle.",
-        "location": "Lomé, Togo",
-        "tag": "Bootcamp Codorah"
-      },
-      {
-        "id": "g2",
-        "title": "Design sprint & Prototypage UI/UX",
+        "id": "im4",
+        "title": "Vie de Codorah",
         "category": "cat_team",
-        "image": "/images/gallery-uiux-sprint.jpg",
-        "desc": "Atelier de co-création d'interfaces utilisateur et tests d'ergonomie orientés conversion.",
+        "image": "/codorah-im4.jpg",
+        "desc": "Un moment de la vie de Codorah.",
         "location": "Lomé, Togo",
-        "tag": "Product Design"
+        "tag": "Codorah"
       },
       {
-        "id": "g3",
-        "title": "Hackathon de code & Nuit de l'innovation",
-        "category": "cat_tech",
-        "image": "/images/gallery-hackathon-coding.jpg",
-        "desc": "48h de challenge algorithmique et développement de MVP en continu par les talents Codorah.",
-        "location": "Lomé, Togo",
-        "tag": "Hackathon 48h"
-      },
-      {
-        "id": "g4",
-        "title": "Remise des diplômes de la promotion Tech Codorah",
-        "category": "cat_training",
-        "image": "/images/gallery-graduation-students.jpg",
-        "desc": "Célébration des nouveaux ingénieurs et développeurs certifiés prêts pour le marché international.",
-        "location": "Lomé, Togo",
-        "tag": "Promotion Certifiée"
-      },
-      {
-        "id": "g5",
-        "title": "Architecture Cloud & Infrastructure sécurisée",
-        "category": "cat_tech",
-        "image": "/images/gallery-datacenter-cloud.jpg",
-        "desc": "Déploiement, monitoring proactif et supervision des clusters haute disponibilité.",
-        "location": "Infrastructure Cloud",
-        "tag": "Cloud & DevOps"
-      },
-      {
-        "id": "g6",
-        "title": "Conférence & Keynote Intelligence Artificielle",
-        "category": "cat_events",
-        "image": "/images/gallery-ai-presentation.jpg",
-        "desc": "Présentation des avancées des modèles génératifs et de leur intégration dans les processus métier.",
-        "location": "Paris / Lomé",
-        "tag": "Intelligence Artificielle"
-      },
-      {
-        "id": "g7",
-        "title": "Collaboration d'équipe & Stratégie Produit",
+        "id": "im5",
+        "title": "Activités Codorah",
         "category": "cat_team",
-        "image": "/images/gallery-team-collaboration.jpg",
-        "desc": "Réunions d'alignement technique et revues de sprints entre lead developers et architectes.",
+        "image": "/codorah-im5.jpg",
+        "desc": "Une image de nos activités.",
         "location": "Lomé, Togo",
-        "tag": "Ingénierie Logicielle"
+        "tag": "Codorah"
       },
       {
-        "id": "g8",
-        "title": "Sommet Technologique & Partenariats Stratégiques",
+        "id": "im6",
+        "title": "Communauté Codorah",
+        "category": "cat_team",
+        "image": "/codorah-im6.jpg",
+        "desc": "Un aperçu de la communauté Codorah.",
+        "location": "Lomé, Togo",
+        "tag": "Codorah"
+      },
+      {
+        "id": "im8",
+        "title": "Temps fort Codorah",
         "category": "cat_events",
-        "image": "/images/gallery-tech-summit.jpg",
-        "desc": "Rencontre annuelle des acteurs du numérique et signatures de conventions d'intégration.",
-        "location": "Afrique de l'Ouest",
-        "tag": "Partenariats Tech"
+        "image": "/codorah-im8.jpg",
+        "desc": "Un temps fort partagé par Codorah.",
+        "location": "Lomé, Togo",
+        "tag": "Codorah"
       }
     ]
   },
@@ -513,8 +506,8 @@
     "badge": "DONNEZ VIE À VOS PROJETS",
     "title": "Prêt à propulser votre entreprise dans le futur numérique ?",
     "subtitle": "Que vous ayez besoin d'une application sur-mesure, d'un déploiement d'IA ou d'un programme de formation, nos experts sont à votre écoute.",
-    "button": "Demander une consultation gratuite",
-    "subtext": "Réponse sous 24h ouvrées • Devis sans engagement • Confidentialité garantie"
+    "button": "Demander un échange",
+    "subtext": "Échange initial • Approche adaptée au besoin • Confidentialité à prévoir selon le projet"
   },
   "modal": {
     "title": "Parlons de votre projet",
@@ -553,7 +546,7 @@
     "close": "Fermer"
   },
   "footer": {
-    "tagline": "Architectes de solutions numériques d'exception et formateurs d'élite pour les leaders de demain.",
+    "tagline": "Des solutions numériques et des formations pratiques pensées pour les réalités locales.",
     "solutionsTitle": "Solutions & Services",
     "trainingsTitle": "Académie & Formations",
     "companyTitle": "Entreprise",
@@ -563,7 +556,7 @@
     "privacy": "Politique de Confidentialité",
     "terms": "Conditions Générales",
     "legalNotice": "Mentions Légales",
-    "rights": "Tous droits réservés. Codorah SARL.",
+    "rights": "Tous droits réservés. Codorah.",
     "builtWith": "Conçu avec passion & rigueur technologique."
   }
 }

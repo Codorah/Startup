@@ -7,7 +7,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Sparkles, ArrowRight, ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
 import ContactModal from './ContactModal';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 

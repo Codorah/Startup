@@ -15,7 +15,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Codorah | Ingénierie Logicielle, Solutions IA & Académie du Numérique',
+  title: 'Codorah | Solutions numériques, IA & formation',
   description:
     'Codorah propulse les entreprises et talents avec des solutions logicielles sur-mesure, de l\'IA de pointe et des formations technologiques d\'élite.',
   icons: {

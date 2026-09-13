@@ -46,9 +46,18 @@
     "title": "We transform your ideas into digital solutions that change the game.",
     "subtitle": "From startups to multinationals, Codorah designs robust software architectures, integrates AI into your workflows, and trains your teams for tomorrow's technological challenges.",
     "cta": "Discover Our Approach",
-    "stat1": { "value": "150+", "label": "Projects delivered" },
-    "stat2": { "value": "2,500+", "label": "Talents trained" },
-    "stat3": { "value": "99.9%", "label": "Guaranteed uptime" }
+    "stat1": {
+      "value": "Web",
+      "label": "Solutions to design"
+    },
+    "stat2": {
+      "value": "AI",
+      "label": "Uses to explore"
+    },
+    "stat3": {
+      "value": "Digital",
+      "label": "Skills to develop"
+    }
   },
   "services": {
     "badge": "OUR EXPERTISE",
@@ -124,12 +133,30 @@
     "title": "A revolutionary concept of tech partnership",
     "subtitle": "We don't sell services — we co-build your digital success.",
     "features": [
-      { "icon": "Rocket", "label": "Scalable Architecture" },
-      { "icon": "ShieldCheck", "label": "Security by Design" },
-      { "icon": "Users", "label": "Dedicated Teams" },
-      { "icon": "BarChart3", "label": "Measurable KPIs" },
-      { "icon": "Clock", "label": "Sprint Deliveries" },
-      { "icon": "Globe", "label": "International Reach" }
+      {
+        "icon": "Rocket",
+        "label": "Scalable Architecture"
+      },
+      {
+        "icon": "ShieldCheck",
+        "label": "Security by Design"
+      },
+      {
+        "icon": "Users",
+        "label": "Dedicated Teams"
+      },
+      {
+        "icon": "BarChart3",
+        "label": "Measurable KPIs"
+      },
+      {
+        "icon": "Clock",
+        "label": "Sprint Deliveries"
+      },
+      {
+        "icon": "Globe",
+        "label": "International Reach"
+      }
     ]
   },
   "mediaGrid": {
@@ -138,13 +165,13 @@
     "items": [
       {
         "id": "m1",
-        "title": "National 48h Code Hackathon",
+        "title": "Coding and prototyping workshop",
         "category": "Tech Event",
         "image": "/images/gallery-hackathon-coding.jpg"
       },
       {
         "id": "m2",
-        "title": "High-availability cloud architecture for clients",
+        "title": "Exploring cloud environments",
         "category": "Infrastructure",
         "image": "/images/gallery-datacenter-cloud.jpg"
       },
@@ -156,7 +183,7 @@
       },
       {
         "id": "m4",
-        "title": "Generative AI Keynote & Business Opportunities",
+        "title": "Exploring generative AI",
         "category": "Conference",
         "image": "/images/gallery-ai-presentation.jpg"
       }
@@ -249,7 +276,7 @@
   "ctaBanner": {
     "tagline": "READY TO START?",
     "title": "Join the companies that trust Codorah.",
-    "subtitle": "Whether for custom development, AI integration, or team training — get started in 48 hours.",
+    "subtitle": "Whether for custom development, AI integration, or team training — get started in the first exchange.",
     "primaryCta": "Book a Consultation",
     "secondaryCta": "View Our Work"
   },
@@ -259,10 +286,22 @@
   "trust": {
     "badge": "TRUSTED BY INDUSTRY LEADERS",
     "heading": "Leading organizations transforming their digital future with Codorah",
-    "stat1": { "value": "10+", "label": "Years of Combined Tech Expertise" },
-    "stat2": { "value": "150+", "label": "Digital Software Projects Shipped" },
-    "stat3": { "value": "2,500+", "label": "Talents & Professionals Trained" },
-    "stat4": { "value": "99.9%", "label": "Guaranteed Reliability & Uptime" }
+    "stat1": {
+      "value": "10+",
+      "label": "Years of Combined Tech Expertise"
+    },
+    "stat2": {
+      "value": "Web",
+      "label": "Digital Software Projects Shipped"
+    },
+    "stat3": {
+      "value": "AI",
+      "label": "Talents & Professionals Trained"
+    },
+    "stat4": {
+      "value": "Digital",
+      "label": "Guaranteed Reliability & Uptime"
+    }
   },
   "projects": {
     "badge": "PROJECTS & IMPACT",
@@ -278,7 +317,12 @@
         "logo": "/projects/cfa-express.png",
         "impact": "+450k secured transactions",
         "description": "Instant transactional platform and high-resilience currency transfer gateway.",
-        "tech": ["Next.js", "Node.js", "PostgreSQL", "Banking APIs"]
+        "tech": [
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Banking APIs"
+        ]
       },
       {
         "id": "agro-capital",
@@ -287,7 +331,12 @@
         "logo": "/projects/agro-capital.png",
         "impact": "3.2x investment growth",
         "description": "Crowdfunding system and farm traceability platform connecting investors and local cooperatives.",
-        "tech": ["React", "Python/FastAPI", "GeoJSON", "Cloud Run"]
+        "tech": [
+          "React",
+          "Python/FastAPI",
+          "GeoJSON",
+          "Cloud Run"
+        ]
       },
       {
         "id": "pharmalink",
@@ -296,7 +345,12 @@
         "logo": "/projects/pharmalink.webp",
         "impact": "-65% inventory shortages",
         "description": "Intelligent pharmaceutical supply network and automated inventory management.",
-        "tech": ["Flutter", "TypeScript", "Redis", "Docker"]
+        "tech": [
+          "Flutter",
+          "TypeScript",
+          "Redis",
+          "Docker"
+        ]
       },
       {
         "id": "edufast",
@@ -305,7 +359,12 @@
         "logo": "/projects/edufast academy.webp",
         "impact": "15,000+ active students",
         "description": "Adaptive learning platform with online exams and blockchain certification.",
-        "tech": ["Next.js", "WebRTC", "Tailwind CSS", "MongoDB"]
+        "tech": [
+          "Next.js",
+          "WebRTC",
+          "Tailwind CSS",
+          "MongoDB"
+        ]
       },
       {
         "id": "eganye",
@@ -314,7 +373,12 @@
         "logo": "/projects/eganye.png",
         "impact": "+280% B2B commercial volume",
         "description": "Unified merchant collection portal and secure professional exchange marketplace.",
-        "tech": ["React Native", "Spring Boot", "Kafka", "AWS"]
+        "tech": [
+          "React Native",
+          "Spring Boot",
+          "Kafka",
+          "AWS"
+        ]
       },
       {
         "id": "miklpanu",
@@ -323,7 +387,12 @@
         "logo": "/projects/miklpanu.png",
         "impact": "Average delivery under 2h",
         "description": "Local logistics distribution platform with real-time GPS courier tracking.",
-        "tech": ["Vue.js", "Node.js", "WebSockets", "Mapbox"]
+        "tech": [
+          "Vue.js",
+          "Node.js",
+          "WebSockets",
+          "Mapbox"
+        ]
       },
       {
         "id": "heritogo",
@@ -332,7 +401,12 @@
         "logo": "/projects/heritogo.avif",
         "impact": "+120% tourist engagement",
         "description": "Interactive guide showcasing cultural heritage with guided geolocation.",
-        "tech": ["PWA", "Next.js", "Supabase", "Stripe"]
+        "tech": [
+          "PWA",
+          "Next.js",
+          "Supabase",
+          "Stripe"
+        ]
       }
     ]
   },
@@ -391,121 +465,40 @@
     "cat_team": "Team & Collaborations",
     "items": [
       {
-        "id": "ceo-elearning-photocall",
-        "title": "Mrs. Elodie H. ATANA — eLearning Africa International Summit",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-elearning-photocall.jpg",
-        "desc": "Codorah's CEO & Founder at the official photocall of the 19th International Conference on Digital Education & Training in Africa.",
-        "location": "Accra, Ghana",
-        "tag": "Leadership & Vision"
-      },
-      {
-        "id": "ceo-elearning-stage",
-        "title": "Main Stage Keynote at eLearning Africa",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-elearning-africa-stage.jpg",
-        "desc": "Keynote address by Elodie H. ATANA before international delegations, ministers, and African tech innovators.",
-        "location": "Accra, Ghana",
-        "tag": "International Keynote"
-      },
-      {
-        "id": "ceo-giz-summit",
-        "title": "Address at Togolese Digital Transformation Summit (EU & GIZ)",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-giz-summit.jpg",
-        "desc": "Elodie H. ATANA speaking on private-public synergies with the European Union and GIZ to accelerate Togo's digital economy.",
-        "location": "Lomé, Togo",
-        "tag": "International Partnership"
-      },
-      {
-        "id": "ceo-award",
-        "title": "Official Recognition & Award — Republic of Togo",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-award.jpg",
-        "desc": "Excellence recognition awarded to Mrs. Elodie H. ATANA by the Ministry of Digital Transformation and Public Sector Efficiency.",
-        "location": "Lomé, Togo",
-        "tag": "Official Recognition"
-      },
-      {
-        "id": "ceo-elearning-speech",
-        "title": "Advocacy for Digital Skills and Tech Excellence in Africa",
-        "category": "cat_leadership",
-        "image": "/images/elodie-atana-elearning-speech.jpg",
-        "desc": "Podium address by Elodie H. ATANA highlighting the strategic importance of practical software training for African youth.",
-        "location": "Accra, Ghana",
-        "tag": "Pan-African Impact"
-      },
-      {
-        "id": "g1",
-        "title": "Intensive bootcamp in connected classroom",
-        "category": "cat_training",
-        "image": "/images/gallery-training-classroom.jpg",
-        "desc": "Our students in collaborative programming exercises and software architecture challenges.",
-        "location": "Lomé, Togo",
-        "tag": "Codorah Bootcamp"
-      },
-      {
-        "id": "g2",
-        "title": "Design sprint & UI/UX prototyping",
+        "id": "im4",
+        "title": "Codorah life",
         "category": "cat_team",
-        "image": "/images/gallery-uiux-sprint.jpg",
-        "desc": "User interface co-creation workshop and conversion-driven design systems.",
+        "image": "/codorah-im4.jpg",
+        "desc": "A moment from Codorah life.",
         "location": "Lomé, Togo",
-        "tag": "Product Design"
+        "tag": "Codorah"
       },
       {
-        "id": "g3",
-        "title": "Code hackathon & Night of innovation",
-        "category": "cat_tech",
-        "image": "/images/gallery-hackathon-coding.jpg",
-        "desc": "48-hour algorithmic challenge and MVP sprint by Codorah talents.",
-        "location": "Lomé, Togo",
-        "tag": "48h Hackathon"
-      },
-      {
-        "id": "g4",
-        "title": "Graduation ceremony — Tech class",
-        "category": "cat_training",
-        "image": "/images/gallery-graduation-students.jpg",
-        "desc": "Celebrating certified developers and engineers ready for top companies worldwide.",
-        "location": "Lomé, Togo",
-        "tag": "Graduation Class"
-      },
-      {
-        "id": "g5",
-        "title": "Cloud architecture & Secure infrastructure",
-        "category": "cat_tech",
-        "image": "/images/gallery-datacenter-cloud.jpg",
-        "desc": "Deployment, proactive monitoring, and high-availability enterprise cluster supervision.",
-        "location": "Cloud Infrastructure",
-        "tag": "Cloud & DevOps"
-      },
-      {
-        "id": "g6",
-        "title": "AI keynote & Conference",
-        "category": "cat_events",
-        "image": "/images/gallery-ai-presentation.jpg",
-        "desc": "Presenting generative model advances and enterprise implementation strategies.",
-        "location": "Paris / Lomé",
-        "tag": "Artificial Intelligence"
-      },
-      {
-        "id": "g7",
-        "title": "Team collaboration & Product strategy",
+        "id": "im5",
+        "title": "Codorah activities",
         "category": "cat_team",
-        "image": "/images/gallery-team-collaboration.jpg",
-        "desc": "Sprint reviews and technical architecture alignment between senior engineers.",
+        "image": "/codorah-im5.jpg",
+        "desc": "An image from our activities.",
         "location": "Lomé, Togo",
-        "tag": "Software Engineering"
+        "tag": "Codorah"
       },
       {
-        "id": "g8",
-        "title": "Tech Summit & Strategic Partnerships",
+        "id": "im6",
+        "title": "Codorah community",
+        "category": "cat_team",
+        "image": "/codorah-im6.jpg",
+        "desc": "A glimpse of the Codorah community.",
+        "location": "Lomé, Togo",
+        "tag": "Codorah"
+      },
+      {
+        "id": "im8",
+        "title": "Codorah highlight",
         "category": "cat_events",
-        "image": "/images/gallery-tech-summit.jpg",
-        "desc": "Annual digital industry gathering and partnership agreements.",
-        "location": "West Africa",
-        "tag": "Tech Partnerships"
+        "image": "/codorah-im8.jpg",
+        "desc": "A highlight shared by Codorah.",
+        "location": "Lomé, Togo",
+        "tag": "Codorah"
       }
     ]
   },
@@ -563,7 +556,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
     "legalNotice": "Legal Notice",
-    "rights": "All rights reserved. Codorah SARL.",
+    "rights": "All rights reserved. Codorah.",
     "builtWith": "Built with passion & technical rigor."
   }
 }

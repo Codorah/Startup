@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
-import { ArrowRight, Sparkles, CheckCircle2, TrendingUp, ShieldCheck, Terminal, Cpu } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Terminal, Cpu } from 'lucide-react';
 import ContactModal from './ContactModal';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 
@@ -34,7 +34,7 @@ export default function CtaBanner({ dict, modalDict, locale }: CtaBannerProps) {
             {/* Left copy */}
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-violet-100 text-xs font-bold tracking-wider uppercase border border-white/20">
-                <Sparkles className="w-3.5 h-3.5 text-yellow-300" />
+                <Terminal className="w-3.5 h-3.5 text-yellow-300" />
                 {dict.tagline}
               </span>
 
@@ -69,15 +69,15 @@ export default function CtaBanner({ dict, modalDict, locale }: CtaBannerProps) {
               <div className="flex flex-wrap gap-6 pt-4 text-xs font-semibold text-violet-200 border-t border-white/15">
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  Devis gratuit sous 24h
+                  Premier échange sans engagement
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  Zéro engagement initial
+                  Besoin clarifié ensemble
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  Accompagnement senior
+                  Accompagnement adapté au projet
                 </span>
               </div>
             </div>
@@ -111,12 +111,12 @@ export default function CtaBanner({ dict, modalDict, locale }: CtaBannerProps) {
                       <Cpu className="w-4 h-4 text-violet-300" />
                     </div>
                     <div>
-                      <p className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">AI Deployment</p>
-                      <p className="text-sm font-bold text-white">Active (v2.4.1)</p>
+                      <p className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Projet IA</p>
+                      <p className="text-sm font-bold text-white">À cadrer ensemble</p>
                     </div>
                   </div>
                   <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold">
-                    99.9% Up
+                    À étudier
                   </span>
                 </div>
 
@@ -127,12 +127,12 @@ export default function CtaBanner({ dict, modalDict, locale }: CtaBannerProps) {
                       <TrendingUp className="w-4 h-4 text-indigo-300" />
                     </div>
                     <div>
-                      <p className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Sprint Velocity</p>
-                      <p className="text-sm font-bold text-white">+38% Efficiency</p>
+                      <p className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Avancement</p>
+                      <p className="text-sm font-bold text-white">Suivi par étapes</p>
                     </div>
                   </div>
                   <span className="px-2.5 py-1 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 text-[10px] font-bold">
-                    On Track
+                    En cours
                   </span>
                 </div>
 
@@ -140,9 +140,9 @@ export default function CtaBanner({ dict, modalDict, locale }: CtaBannerProps) {
                 <div className="pt-2 flex items-center justify-between text-xs text-slate-400">
                   <span className="flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                    ISO 27001 & RGPD Verified
+                    Sécurité à intégrer dès la conception
                   </span>
-                  <span className="text-[10px] font-mono text-violet-300">Fast Delivery</span>
+                  <span className="text-[10px] font-mono text-violet-300">Projet sur mesure</span>
                 </div>
               </motion.div>
             </div>

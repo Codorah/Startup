@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { X, Send, CheckCircle2, Sparkles } from 'lucide-react';
+import { X, Send, CheckCircle2, MessageSquare } from 'lucide-react';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 
 interface ContactModalProps {
@@ -31,18 +31,37 @@ export default function ContactModal({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate high-reliability API submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || 'Contact request failed.');
+      }
+
       setIsSuccess(true);
       setTimeout(() => {
         setIsSuccess(false);
         onClose();
       }, 3000);
-    }, 1000);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : '';
+      window.alert(
+        message === 'Email service is not configured.'
+          ? 'L?envoi de demandes est temporairement indisponible. Veuillez nous contacter par email.'
+          : 'Une erreur est survenue. Veuillez r?essayer ou nous contacter par email.',
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -76,7 +95,7 @@ export default function ContactModal({
           <div>
             <div className="mb-6">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold mb-2">
-                <Sparkles className="w-3.5 h-3.5" />
+                <MessageSquare className="w-3.5 h-3.5" />
                 <span>Codorah Partnership</span>
               </div>
               <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">

@@ -6,7 +6,6 @@ import Image from 'next/image';
 import {
   ArrowRight,
   CheckCircle2,
-  Sparkles,
   Smartphone,
   ShieldCheck,
   TrendingUp,
@@ -154,24 +153,7 @@ export default function HeroSection({ locale, dict }: HeroSectionProps) {
               </Link>
             </motion.div>
 
-            {/* Trust Micro-Row */}
-            <motion.div
-              variants={fadeUp}
-              className="flex flex-wrap items-center gap-6 pt-3 text-xs font-semibold text-slate-500 border-t border-slate-100"
-            >
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>Sprint livré en 48h</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>99.9% Disponibilité Cloud</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>Paris & Lomé</span>
-              </div>
-            </motion.div>
+
           </motion.div>
 
           {/* ── RIGHT COLUMN: Solimi-Style Angled Floating Devices & Mockups ── */}
@@ -181,9 +163,9 @@ export default function HeroSection({ locale, dict }: HeroSectionProps) {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="lg:col-span-6 relative flex items-center justify-center min-h-[460px] sm:min-h-[540px] pt-6 lg:pt-0"
           >
-            {/* Sparkle decorative icon */}
+            {/* Decorative technology icon */}
             <div className="absolute top-2 right-12 z-30 text-violet-500 animate-bounce">
-              <Sparkles className="w-6 h-6" />
+              <Cpu className="w-6 h-6" />
             </div>
 
             {/* Composition container with 3D perspective */}
@@ -278,7 +260,7 @@ export default function HeroSection({ locale, dict }: HeroSectionProps) {
                   {/* Header */}
                   <div className="flex items-center justify-between pb-2 border-b border-slate-100">
                     <span className="text-[11px] font-extrabold text-violet-900">Codorah Cloud</span>
-                    <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[9px]">99.9% LIVE</span>
+                    <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[9px]">EN CONCEPTION</span>
                   </div>
 
                   {/* Metric Box 1 */}
@@ -287,7 +269,7 @@ export default function HeroSection({ locale, dict }: HeroSectionProps) {
                       <span>Projets Actifs</span>
                       <TrendingUp className="w-3 h-3 text-violet-600" />
                     </div>
-                    <p className="text-lg font-black text-violet-900">150+ Livrés</p>
+                    <p className="text-lg font-black text-violet-900">Sur mesure</p>
                     <div className="w-full bg-violet-200 h-1 rounded-full overflow-hidden">
                       <div className="bg-violet-600 h-full w-[85%]" />
                     </div>
@@ -299,8 +281,8 @@ export default function HeroSection({ locale, dict }: HeroSectionProps) {
                       <span>Académie & Talents</span>
                       <Cpu className="w-3 h-3 text-indigo-600" />
                     </div>
-                    <p className="text-base font-bold text-slate-900">2 500+ Formés</p>
-                    <p className="text-[9px] text-slate-500">Bootcamps & Certifications</p>
+                    <p className="text-base font-bold text-slate-900">Formations pratiques</p>
+                    <p className="text-[9px] text-slate-500">Ateliers & accompagnement</p>
                   </div>
 
                   {/* Status checklist */}
@@ -333,7 +315,7 @@ export default function HeroSection({ locale, dict }: HeroSectionProps) {
                 </div>
                 <div>
                   <span className="block text-[10px] text-slate-500 font-semibold uppercase">Performance</span>
-                  <span className="text-xs text-violet-700 font-extrabold">Sprint & Delivery 48h</span>
+                  <span className="text-xs text-violet-700 font-extrabold">Livraisons par étapes</span>
                 </div>
               </motion.div>
 

@@ -2,14 +2,14 @@
 
 import Image from 'next/image';
 import { motion } from 'motion/react';
-import { CheckCircle2, Shield, Zap, Sparkles, Target } from 'lucide-react';
+import { CheckCircle2, Shield, Zap, Lightbulb, Target } from 'lucide-react';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 
 interface WhyUsAlternatingProps {
   dict: Dictionary['whyUs'];
 }
 
-const PILLAR_ICONS = [Zap, Shield, Target, Sparkles];
+const PILLAR_ICONS = [Zap, Shield, Target, Lightbulb];
 
 export default function WhyUsAlternating({ dict }: WhyUsAlternatingProps) {
   return (
@@ -86,7 +86,7 @@ export default function WhyUsAlternating({ dict }: WhyUsAlternatingProps) {
 
                   <div className="pt-2 flex items-center gap-3 text-sm font-semibold text-violet-700">
                     <CheckCircle2 className="w-5 h-5 text-violet-600" />
-                    <span>Standard d&apos;excellence garanti par Codorah</span>
+                    <span>Une approche adaptée à votre projet</span>
                   </div>
                 </motion.div>
               </div>

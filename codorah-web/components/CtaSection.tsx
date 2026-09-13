@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Sparkles, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, Zap } from 'lucide-react';
 import ContactModal from './ContactModal';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 
@@ -24,7 +24,7 @@ export default function CtaSection({ dict, modalDict }: CtaSectionProps) {
           <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-purple-100 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-purple-300" />
+              <Zap className="w-3.5 h-3.5 text-purple-300" />
               <span>{dict.badge}</span>
             </div>
 

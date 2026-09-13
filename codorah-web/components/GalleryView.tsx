@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import {
   Camera,
-  Sparkles,
   X,
   ZoomIn,
   MapPin,
@@ -129,7 +128,7 @@ export default function GalleryView({ locale, dict }: GalleryViewProps) {
             {/* Left copy & leadership credentials */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/20 border border-violet-400/30 text-violet-300 text-xs font-bold tracking-wide uppercase">
-                <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
+                <Camera className="w-3.5 h-3.5 text-yellow-400" />
                 <span>Direction Générale & Leadership</span>
               </div>
 
@@ -145,7 +144,7 @@ export default function GalleryView({ locale, dict }: GalleryViewProps) {
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal italic border-l-2 border-violet-500 pl-4">
                 &ldquo;
                 {locale === 'fr'
-                  ? "Propulser l'Afrique au premier plan technologique en concevant des architectures logicielles sans compromis et en offrant aux talents du continent des formations d'excellence mondiale."
+                  ? "Contribuer au développement des compétences et des usages numériques utiles en Afrique."
                   : 'Propelling Africa to the tech forefront by building uncompromising software architectures and empowering African talent with world-class training.'}
                 &rdquo;
               </p>
@@ -162,7 +161,7 @@ export default function GalleryView({ locale, dict }: GalleryViewProps) {
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 text-xs font-semibold text-slate-200 border border-white/10">
                   <Users className="w-3.5 h-3.5 text-emerald-400" />
-                  Partenariat UE & GIZ
+                  Écosystème numérique
                 </span>
               </div>
             </div>
@@ -178,7 +177,7 @@ export default function GalleryView({ locale, dict }: GalleryViewProps) {
                 }}
               >
                 <Image
-                  src="/images/elodie-atana-elearning-photocall.jpg"
+                  src="/codorah-im4.jpg"
                   alt="Mme Elodie H. ATANA CEO Codorah"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

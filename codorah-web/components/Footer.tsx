@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ArrowRight, ShieldCheck, Award } from 'lucide-react';
+import { Mail, MapPin, ArrowRight, ShieldCheck } from 'lucide-react';
 import Logo from './Logo';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 
@@ -43,23 +43,16 @@ export default function Footer({ locale, dict }: FooterProps) {
 
               <div className="flex items-center gap-3">
                 <div className="w-7 h-7 rounded-lg bg-violet-100/70 text-violet-700 flex items-center justify-center shrink-0">
-                  <Phone className="w-3.5 h-3.5" />
-                </div>
-                <span>+33 (0) 1 84 80 52 10 / +228 90 00 00 00</span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-lg bg-violet-100/70 text-violet-700 flex items-center justify-center shrink-0">
                   <MapPin className="w-3.5 h-3.5" />
                 </div>
-                <span>Paris, France & Lomé, Togo</span>
+                <span>Lomé, Togo</span>
               </div>
             </div>
 
             {/* Trust badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white border border-slate-200/90 text-[11px] font-semibold text-slate-700 shadow-2xs">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>Conforme RGPD & Sécurité Entreprise</span>
+              <span>Approche attentive à la confidentialité et à la sécurité</span>
             </div>
           </div>
 
@@ -160,7 +153,7 @@ export default function Footer({ locale, dict }: FooterProps) {
               </li>
               <li>
                 <span className="text-xs text-slate-400">
-                  SAS au capital de 100 000 €
+                  Informations légales en cours de mise à jour
                 </span>
               </li>
             </ul>
@@ -171,8 +164,7 @@ export default function Footer({ locale, dict }: FooterProps) {
         {/* Bottom divider & copyright bar */}
         <div className="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            © {currentYear} Codorah Inc. Tous droits réservés. L’ingénierie logicielle au standard international.
-          </p>
+            © {currentYear} Codorah. Tous droits réservés.</p>
           <div className="flex items-center gap-6">
             <Link href={`/${locale}#terms`} className="hover:text-violet-700 transition-colors">
               Mentions Légales
