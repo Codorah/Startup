@@ -17,9 +17,9 @@ interface HeroSectionProps {
 
 const CHIP_ICONS = [Globe, LayoutDashboard, HeartHandshake];
 const CHIP_POSITIONS = [
-  'top-[6%] -left-2 sm:left-0',
-  'top-[42%] -right-2 sm:right-0',
-  'bottom-[6%] left-[6%]',
+  'top-[36%] -left-3 sm:top-[14%] sm:-left-16',
+  'top-[54%] -right-3 sm:top-[46%] sm:-right-14',
+  'bottom-[10%] -left-3 sm:-left-12',
 ];
 
 // Rotating word timing (seconds): each word stays STEP, slides in/out over SWAP,
@@ -233,17 +233,25 @@ export default function HeroSection({ dict }: HeroSectionProps) {
 
           {/* Visual */}
           <div data-hero-visual className="relative flex items-center justify-center">
-            <div data-hero="mockup" className="relative w-full max-w-xl will-change-transform">
+            <div data-hero="mockup" className="relative w-full max-w-[26rem] will-change-transform">
               <div data-float>
-                <Image
-                  src="/mockup.png"
-                  alt=""
-                  width={1536}
-                  height={1024}
-                  priority
-                  sizes="(min-width: 1024px) 560px, 100vw"
-                  className="w-full h-auto object-contain select-none drop-shadow-[0_40px_60px_rgba(76,29,149,0.25)]"
-                />
+                {/* Portrait card: the cut-out photo is clipped to the card's sides and
+                    bottom (where the arms and laptop are cropped) but pops out above it */}
+                <div className="relative aspect-[4/5] mt-20">
+                  <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-violet-200 via-violet-100 to-indigo-200 shadow-2xl shadow-violet-900/20 ring-1 ring-white/60">
+                    <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-violet-400/30 blur-2xl" />
+                    <div className="absolute top-8 left-6 w-40 h-40 rounded-full border-2 border-dashed border-white/70" />
+                  </div>
+                  <Image
+                    src="/hero-person.webp"
+                    alt={dict.imageAlt}
+                    width={900}
+                    height={1292}
+                    priority
+                    sizes="(min-width: 1024px) 416px, 90vw"
+                    className="absolute bottom-0 inset-x-0 w-full h-auto select-none [clip-path:inset(-50%_0_0_0_round_0_0_2.5rem_2.5rem)]"
+                  />
+                </div>
               </div>
 
               {dict.chips.map((chip, i) => {
