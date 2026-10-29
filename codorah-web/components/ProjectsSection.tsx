@@ -1,158 +1,122 @@
-'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { ExternalLink, ChevronLeft, ChevronRight, TrendingUp } from 'lucide-react';
-import ContactModal from './ContactModal';
+import { ArrowUpRight, Check } from 'lucide-react';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 
 interface ProjectsSectionProps {
   dict: Dictionary['projects'];
-  modalDict: Dictionary['modal'];
 }
 
-export default function ProjectsSection({ dict, modalDict }: ProjectsSectionProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+export default function ProjectsSection({ dict }: ProjectsSectionProps) {
   return (
-    <section id="projects" className="py-24 bg-slate-50/50 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 space-y-16">
+    <section id="projects" className="relative py-24 lg:py-32 bg-white overflow-hidden">
+      <div className="absolute inset-0 bg-grid-dots opacity-40 pointer-events-none [mask-image:linear-gradient(to_bottom,black,transparent_60%)]" />
 
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div className="space-y-4 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs font-bold uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 rounded-full bg-violet-600" />
-              {dict.badge}
-            </div>
-            <h2 className="display-md text-slate-900 tracking-tight">
-              {dict.title}
-            </h2>
-            <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-              {dict.subtitle}
-            </p>
-          </div>
-
-          {/* Carousel Navigation Buttons */}
-          <div className="flex items-center gap-3">
-            <button
-              id="project-prev-btn"
-              className="w-11 h-11 rounded-xl border border-slate-200 bg-white text-slate-700 hover:text-violet-700 hover:border-violet-300 hover:bg-violet-50/50 flex items-center justify-center transition-all shadow-2xs cursor-pointer"
-              aria-label="Previous Project"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              id="project-next-btn"
-              className="w-11 h-11 rounded-xl border border-slate-200 bg-white text-slate-700 hover:text-violet-700 hover:border-violet-300 hover:bg-violet-50/50 flex items-center justify-center transition-all shadow-2xs cursor-pointer"
-              aria-label="Next Project"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20 space-y-4">
+          <span data-reveal className="section-label">{dict.badge}</span>
+          <h2 data-reveal className="display-md text-slate-900">{dict.title}</h2>
+          <p data-reveal className="text-lg text-slate-600 leading-relaxed">{dict.subtitle}</p>
         </div>
 
-        {/* Swiper Projects Carousel */}
-        <div className="relative">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={24}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2, spaceBetween: 24 },
-              1024: { slidesPerView: 3, spaceBetween: 28 },
-            }}
-            navigation={{
-              prevEl: '#project-prev-btn',
-              nextEl: '#project-next-btn',
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            autoplay={{
-              delay: 4500,
-              disableOnInteraction: false,
-            }}
-            className="pb-14"
-          >
-            {dict.items.map((project) => (
-              <SwiperSlide key={project.id} className="h-auto">
-                <div className="h-full rounded-2xl bg-white border border-slate-200/90 p-7 flex flex-col justify-between shadow-2xs hover:shadow-xl hover:border-violet-300 transition-all duration-300 group">
-                  <div className="space-y-6">
-                    {/* Top Logo Container & Sector Badge */}
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="h-14 w-32 rounded-xl bg-slate-50 border border-slate-100 p-2 flex items-center justify-center relative overflow-hidden group-hover:border-violet-200 transition-colors">
-                        <Image
-                          src={project.logo}
-                          alt={`${project.title} logo`}
-                          fill
-                          className="object-contain p-1.5"
-                          unoptimized
-                        />
-                      </div>
-                      <span className="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-[11px] font-bold text-right border border-violet-100">
-                        {project.category}
-                      </span>
-                    </div>
-
-                    {/* Impact Metric Pill */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-100 text-xs font-bold">
-                      <TrendingUp className="w-3.5 h-3.5" />
-                      <span>{project.impact}</span>
-                    </div>
-
-                    {/* Title & Description */}
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-900 group-hover:text-violet-700 transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="mt-2 text-sm text-slate-600 leading-relaxed font-normal">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    {/* Tech tags */}
-                    <div className="flex flex-wrap gap-1.5 pt-1">
-                      {project.tech.map((t, tIdx) => (
-                        <span
-                          key={tIdx}
-                          className="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600 text-xs font-medium"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {dict.items.map((project) => (
+            <article
+              key={project.id}
+              data-reveal
+              className="group flex flex-col rounded-3xl bg-white border border-slate-100 shadow-sm overflow-hidden hover:shadow-2xl hover:shadow-violet-900/10 hover:border-violet-200 transition-[box-shadow,border-color] duration-500"
+            >
+              {/* Browser-framed preview */}
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                tabIndex={-1}
+                aria-hidden
+                className="block px-5 pt-5 bg-gradient-to-b from-violet-50 to-white"
+              >
+                <div className="rounded-t-xl border border-b-0 border-slate-200 bg-white shadow-lg shadow-violet-900/5 overflow-hidden">
+                  <div className="flex items-center gap-2 px-3 py-2 border-b border-slate-100 bg-slate-50">
+                    <span className="flex gap-1">
+                      <span className="w-2 h-2 rounded-full bg-red-300" />
+                      <span className="w-2 h-2 rounded-full bg-amber-300" />
+                      <span className="w-2 h-2 rounded-full bg-emerald-300" />
+                    </span>
+                    <span className="flex-1 truncate rounded-md bg-white border border-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-500">
+                      {project.domain}
+                    </span>
                   </div>
-
-                  {/* Card Bottom CTA */}
-                  <div className="pt-6 mt-6 border-t border-slate-100">
-                    <button
-                      onClick={() => setIsModalOpen(true)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-violet-50 hover:bg-violet-600 text-violet-700 hover:text-white font-semibold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs"
-                    >
-                      <span>{dict.viewProject}</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </button>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-50">
+                    {project.screenshot ? (
+                      <Image
+                        src={project.screenshot}
+                        alt=""
+                        fill
+                        sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
+                        className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center bg-grid-dots">
+                        <div className="relative w-3/5 h-3/5 transition-transform duration-700 ease-out group-hover:scale-105">
+                          <Image src={project.logo} alt="" fill sizes="240px" className="object-contain" />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+              </a>
+
+              <div className="flex flex-1 flex-col gap-4 p-6 sm:p-7">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="relative h-9 w-28 shrink-0">
+                    <Image
+                      src={project.logo}
+                      alt={project.name}
+                      fill
+                      sizes="112px"
+                      className="object-contain object-left"
+                    />
+                  </div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-violet-600 text-right">
+                    {project.category}
+                  </span>
+                </div>
+
+                <div className="space-y-1.5">
+                  <h3 className="text-xl font-extrabold text-slate-900 tracking-tight">{project.name}</h3>
+                  <p className="text-sm font-semibold text-slate-500 italic">{project.tagline}</p>
+                </div>
+
+                <p className="text-sm text-slate-600 leading-relaxed">{project.description}</p>
+
+                <ul className="flex flex-wrap gap-2">
+                  {project.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="inline-flex items-center gap-1.5 rounded-full bg-slate-50 border border-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-700"
+                    >
+                      <Check className="w-3 h-3 text-violet-600" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/link mt-auto pt-2 inline-flex items-center gap-1.5 self-start text-sm font-bold text-violet-700 hover:text-violet-900 transition-colors"
+                >
+                  <span className="underline decoration-violet-300 group-hover/link:decoration-violet-700 underline-offset-4">
+                    {dict.visit}
+                  </span>
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                  <span className="sr-only">({project.name})</span>
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
-
-      <ContactModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        dict={modalDict}
-        defaultService="webMobile"
-      />
     </section>
   );
 }
