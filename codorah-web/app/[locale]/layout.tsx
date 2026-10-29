@@ -43,13 +43,15 @@ export async function generateMetadata({
     title: dict.meta.title,
     description: dict.meta.description,
     icons: {
+      // Google requires a square favicon of at least 48px (multiples of 48 preferred)
       icon: [
-        { url: '/favicon.ico' },
-        { url: '/icon.png', type: 'image/png' },
+        { url: '/favicon.ico', sizes: '48x48' },
+        { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/icon.png', sizes: '512x512', type: 'image/png' },
         { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
         { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       ],
-      apple: '/apple-icon.png',
+      apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
     },
     alternates: {
       canonical: `/${locale}`,
